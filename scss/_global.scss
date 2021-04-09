@@ -1,0 +1,33 @@
+//layout
+$navHeight: 10vh;
+$contentHeight: 100vh - $navHeight;
+
+
+$navHeightResponsive: 35vh;
+
+//colors
+$headingsColor: #449AEF;
+$primaryOpacity: 0.8;
+$primaryColor: rgba(23, 23, 18, $primaryOpacity);
+$secondaryColor: #FFFFFF;
+$thirdColor: #78786E;
+$fourthColor: #E3E3E3;
+
+//text
+
+//mixins
+@mixin flex ($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;    
+    flex-direction: $direction;
+}
+
+
+
+//Components
+
+
+
+
+

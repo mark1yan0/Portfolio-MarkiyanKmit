@@ -1,0 +1,34 @@
+@import '_global.scss';
+@import '_layout.scss';
+
+
+body {
+
+    .background {
+        background-image: linear-gradient($primaryColor 0%, $thirdColor 100%);
+
+        .nav, .responsive-nav {
+            background-color: white;
+
+            //.nav-list 
+        }
+
+        //HOME
+        // .container-fluid {
+
+        // }
+
+        //PROJECTS
+
+        //BIO
+
+        //CONTACTS
+    }
+
+    .background-bio {
+        background-image: linear-gradient($secondaryColor 20%, $fourthColor 100%); //sitemare gradiente
+    }
+    
+}
+
+
