@@ -10,10 +10,31 @@ $headingsColor: #449AEF;
 $primaryOpacity: 0.8;
 $primaryColor: rgba(23, 23, 18, $primaryOpacity);
 $secondaryColor: #FFFFFF;
-$thirdColor: #78786E;
-$fourthColor: #E3E3E3;
+$textColor: #78786E;
+$secondaryTextColor: #E3E3E3;
 
-//text
+//text mobile
+$m-titleSize: 40px;
+$m-pSize: 25px;
+
+//text tablet
+$t-titleSize: 40px;
+$t-pSize: 25px;
+
+//text desktop
+$d-titleSize: 40px;
+$d-pSize: 25px;
+
+
+//Gradient color
+h1, h2 {
+    background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+
 
 //mixins
 @mixin flex ($justify, $align, $direction) {

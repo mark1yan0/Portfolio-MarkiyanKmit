@@ -5,7 +5,7 @@
 body {
 
     .background {
-        background-image: linear-gradient($primaryColor 0%, $thirdColor 100%);
+        background-image: linear-gradient($primaryColor 0%, $textColor 100%);
 
         .nav, .responsive-nav {
             background-color: white;
@@ -13,20 +13,41 @@ body {
             //.nav-list 
         }
 
-        //HOME
-        // .container-fluid {
 
-        // }
 
-        //PROJECTS
+        
+        .container-fluid {
+            h1 {
+                font-size: 55px;
+            }
 
-        //BIO
+            h2 {
+                margin-top: 20px;
+                font-size: $m-titleSize;
+            }
 
-        //CONTACTS
+            p {
+                font-size: $m-pSize;
+                color: $textColor;
+            }
+
+            //HOME
+            .subtitle {
+                color: $secondaryTextColor;
+            }
+
+            //PROJECTS
+
+            //BIO
+
+            //CONTACTS
+        }
+
+        
     }
 
     .background-bio {
-        background-image: linear-gradient($secondaryColor 20%, $fourthColor 100%); //sitemare gradiente
+        background-image: linear-gradient($secondaryColor 20%, $secondaryTextColor 100%); //sitemare gradiente
     }
     
 }
