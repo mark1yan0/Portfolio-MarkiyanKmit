@@ -26,27 +26,20 @@ $d-titleSize: 40px;
 $d-pSize: 25px;
 
 
-//Gradient color
-h1, h2 {
-    background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-
-
 //mixins
 @mixin flex ($justify, $align, $direction) {
     display: flex;
     justify-content: $justify;
     align-items: $align;    
     flex-direction: $direction;
+    flex-wrap: wrap;
 }
 
 
 
-//Components
+    
+
+
 
 
 

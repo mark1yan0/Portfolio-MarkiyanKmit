@@ -1,0 +1,126 @@
+//NAV
+.nav {
+    margin: 0;
+    width: 100%;
+    background: white;
+    height: $navHeight;
+
+    .nav-list {
+        padding-left: 0;
+        margin: 0;
+        height: $navHeight;
+        @include flex (space-between, center, row);
+    }
+}  
+
+//nav home per mobile e tablet
+.responsive-nav {
+    margin: 0;
+    width: 100%;
+    height: $navHeightResponsive;
+    background: white;
+
+    .nav-list {
+        height: $navHeightResponsive;
+        @include flex (space-around, center, column);
+    } 
+}
+
+//SOCIAL
+.social-icons {
+    @include flex(space-between, flex-start, row);
+    li {
+        a {
+            color: white;
+            font-size: 2em;
+        }
+    }
+}
+
+//PROJECTS
+.project {
+    margin-top: 30px;
+    background-color: #449AEF;
+    width: 100%;
+    height: 100%;
+    
+    .project-image {
+        width: 100%;
+        height: 40%;
+    }
+} 
+
+
+//TEXT
+h1, h2 {
+    background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+h1 { //settare il fontsize e fare tutto in em
+    font-size: 55px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: $m-titleSize;
+}
+
+p {
+    font-size: $m-pSize;
+    color: $textColor;
+}
+
+//responsive
+
+//Mobile 
+@media only screen and (max-width: 576px) {
+
+} 
+
+
+
+//Tablet 
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+} 
+
+
+//Desktop
+@media only screen and (min-width: 992px) {
+
+    //SOCIAL
+    .social-icons {
+        @include flex(space-around, center, column);
+    }
+
+    //NAV
+    .responsive-nav {
+        height: $navHeight;
+
+        .nav-list {
+            padding: 0 !important;
+            height: $navHeight;
+            @include flex (space-between, center, row);
+        }
+    }
+
+    //PROJECTS
+    .project {
+        width: 48%;
+    } 
+}
+
+
+//Extra large screens
+@media only screen and (min-width: 1200px) {
+    .project {
+        width: 31%;
+    } 
+}
+
+
+
+

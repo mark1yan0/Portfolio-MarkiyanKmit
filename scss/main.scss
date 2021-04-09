@@ -1,35 +1,17 @@
 @import '_global.scss';
 @import '_layout.scss';
+@import '_components.scss';
 
-
+//COLORS
 body {
 
     .background {
         background-image: linear-gradient($primaryColor 0%, $textColor 100%);
 
-        .nav, .responsive-nav {
-            background-color: white;
-
-            //.nav-list 
-        }
-
 
 
         
-        .container-fluid {
-            h1 {
-                font-size: 55px;
-            }
-
-            h2 {
-                margin-top: 20px;
-                font-size: $m-titleSize;
-            }
-
-            p {
-                font-size: $m-pSize;
-                color: $textColor;
-            }
+        .container {
 
             //HOME
             .subtitle {
@@ -52,4 +34,14 @@ body {
     
 }
 
+
+//Small ditails
+ul {
+    margin: 0;
+    padding: 0;
+}
+    
+li {
+    list-style-type: none;
+}
 

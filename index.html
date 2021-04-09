@@ -5,71 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet/style.min.css">
+    <link rel="stylesheet" href="stylesheet/main.min.css">
     <title>Portfolio | Markiyan Kmit</title>
 </head>
 <body>
 
     <!-- HOME -->
-    <div class="background background-home">
-        <div class="container-fluid">
-            <header class="row home-structure">
-                <div class="col-12 col-md-1 social">
-                    <i>Ciao</i>
+    <div id="home" class="background background-home">
+        <div class="container">
+            <header class="row home-content">
+                <div class="col-12 col-lg-1 social">
+                    <ul>
+                        <div class="social-icons">
+                            <li><a href="https://www.instagram.com/markkmit/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a></li>
+                            <li><a href="https://github.com/mark1yan0" target="_blank"><i class="fab fa-github" title="GitHub"></i></a></li>
+                            <li><a href="https://www.facebook.com/markiyan.kmit" target="_blank"><i class="fab fa-facebook" title="Facebook"></i></a></li>
+                            <li><a href="https://twitter.com/Mark1yan" target="_blank"><i class="fab fa-twitter" title="Twitter"></i></a></li>
+                        </div>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-11">
-                    <h1>Markiyan Kmit</h1>
-                    <p class="subtitle">Un aspirante Front End Developer</p>
+                <div class="col-12 col-lg-11">
+                    <div class="title">
+                        <h1>Markiyan Kmit</h1>
+                        <p class="subtitle">Un aspirante Front End Developer</p>
+                    </div>
                 </div>
             </header>
         </div>
         <div class="row responsive-nav">
             <div class="col-12">
                 <ul class="nav-list">
-                    <li>Progetti</li>
-                    <li>Bio</li>
-                    <li>Contattami</li>
+                    <li><a href="#projects">Progetti</a></li>
+                    <li><a href="#bio">Bio</a></li>
+                    <li><a href="#contacts">Contattami</a></li>
                 </ul>
             </div>
         </div> 
     </div>
        
 
-        <!-- PROJECTS -->
-    <div class="background">
-        <div class="container-fluid">
-            <div class="row structure project-structure">
+    <!-- PROJECTS -->
+    <div id="projects" class="background">
+        <div class="container">
+            <div class="row content">
                 <div class="col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>I miei Progetti</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <div class="project-container">
-                                <div class="project-image">
-                                    immagine
-                                </div>
-            
-                                <div class="project-description">
-                                    <h3>es: Prynce</h3>
-                                    <p>Questo è un sito web che ho realizzato sfruttnado Wordpress, WooCommerce, Elementor, altri plug-in e un po' di CSS personalizzato</p>
-                                </div>
+                    <h2>I miei Progetti</h2>
+                    <div class="project-container">
+                        <div class="project">
+                            <div class="project-image">
+                                immagine
+                            </div>
+                            <div class="project-description">
+                                <h3>es: Prynce</h3>
+                                <p>Questo è un sito web che ho realizzato sfruttnado Wordpress, WooCommerce, Elementor, altri plug-in e un po' di CSS personalizzato</p>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6"> <!--Quando ho più progetti settare col-xl-3-->
-                            <div class="project-container">
-                                <div class="project-image">
-                                    immagine
-                                </div>
-            
-                                <div class="project-description">
-                                    <h3>es: un altro progetto</h3>
-                                    <p>Questo è un sito web che ho realizzato sfruttnado Wordpress, WooCommerce, Elementor, altri plug-in e un po' di CSS personalizzato</p>
-                                </div>
+                        <div class="project">
+                            <div class="project-image">
+                                Immagine
                             </div>
-                        </div>      
+                            <div class="project-description">
+                                <h3>es: un altro progetto</h3>
+                                <p>Questo è un sito web che ho realizzato sfruttnado Wordpress, WooCommerce, Elementor, altri plug-in e un po' di CSS personalizzato</p>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-image">
+                                immagine
+                            </div>
+                            <div class="project-description">
+                                <h3>es: Prynce</h3>
+                                <p>Questo è un sito web che ho realizzato sfruttnado Wordpress, WooCommerce, Elementor, altri plug-in e un po' di CSS personalizzato</p>
+                            </div>
+                        </div>
                     </div>  
                 </div>
             </div>   
@@ -87,16 +96,14 @@
         
            
 
-        <!-- BIO -->
-    <div class="background background-bio">
-        <div class="container-fluid">
-            <div class="row structure bio-structure">
+    <!-- BIO -->
+    <div id="bio" class="background background-bio">
+        <div class="container">
+            <div class="row content bio-structure">
                 <div class="col-12">
                     <h2>Bio</h2>
-    
-                    <p class="bio-text">inserire bio</p>
-    
-                </div>
+                    <p class="bio-text">DA FARE: guardare video per le dimensioni font, fare design form, fare design progetti, immagine home, vedere la tipografia, scrivere e inserire la bio + stile, ottimizzare html semantico. Finito tutto, fare le animazioni, inserire le scroll, capire alla fine cosa fare coi menu </p>
+                 </div>
             </div>
         </div>
         <div class="row nav">
@@ -111,10 +118,10 @@
     </div>        
            
 
-        <!-- CONTACTS -->
-    <div class="background">
-        <div class="container-fluid">
-            <div class="row structure">
+    <!-- CONTACTS -->
+    <div id="contacts" class="background">
+        <div class="container">
+            <div class="row content">
                 <div class="col-12">
                     <h2>Contattami</h2>
     
@@ -139,7 +146,14 @@
                                 <p>oppure</p>
                             </div>
                             <div class="col-12">
-                                <!-- ICONE SOCIAL -->
+                                <ul>
+                                    <div class="social-icons">
+                                        <li><a href="https://www.instagram.com/markkmit/" target="_blank"><i class="fab fa-instagram" title="Instagram"></i></a></li>
+                                        <li><a href="https://github.com/mark1yan0" target="_blank"><i class="fab fa-github" title="GitHub"></i></a></li>
+                                        <li><a href="https://www.facebook.com/markiyan.kmit" target="_blank"><i class="fab fa-facebook" title="Facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/Mark1yan" target="_blank"><i class="fab fa-twitter" title="Twitter"></i></a></li>
+                                    </div>
+                                </ul>
                             </div>
                         </div>
                     </form>
@@ -170,5 +184,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8775c31f86.js" crossorigin="anonymous"></script>
 </body>
 </html>

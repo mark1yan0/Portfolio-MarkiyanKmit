@@ -1,82 +1,45 @@
 //Mobile-first
+
 * {
-    padding: 0;
-    margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    div {
 
+    div {
         width: 100%;
 
-        .container-fluid {
-            max-width: 90%;
+        .container {
             
-            .structure {
+            .content {
+                margin: 0;
                 height: $contentHeight;
+
+                .col-12 {
+                    //PROJECTS GRID
+                    .project-container {
+                        margin-top: -30px; 
+                        @include flex(space-between, center, column);
+                    }
+                }
             }
 
             //HOME
-            .home-structure {
-                height: 100vh - $navHeightResponsive;
+            .home-content {
+                height: 100vh - $navHeightResponsive; //altezza per telefono
 
                 .social {
                     order: 0;
+                    margin-top: 15px;
+                }
+
+                .title {
+                    height: 100%; //altezza contenitore titolo per telefono
+                    @include flex(center, flex-start, column);
                 }
             }
 
-            //PROJECTS
-            .project-structure {
-                .project-container {
-                    width: 100%;
-                    height: fit-content;
-
-                    .project-image {
-                        width: 100%;
-                        height: 200px;
-                    }
-                } 
-            }
-
-            //BIO
-            //CONTACTS
-        }
-
-        .nav {
-            width: 100%;
-            height: $navHeight;
-            padding: 0;
-            margin: 0;
-        
-            .nav-list {
-                padding-left: 0;
-                margin: 0;
-                height: $navHeight;
-                @include flex (space-between, center, row);
-        
-                li {
-                    list-style-type: none;
-                }
-            }
-        }  
-        
-        //nav home per mobile e tablet
-        .responsive-nav {
-            width: 100%;
-            height: $navHeightResponsive;
-            padding: 0;
-            margin: 0;
-
-            .nav-list {
-                margin: 0;
-                padding: 0;
-                height: $navHeightResponsive;
-                @include flex (space-around, center, column);
-
-                li {
-                    list-style-type: none;
-                }
-            }    
+           
         }
     }
 }
@@ -84,21 +47,15 @@ body {
 
 //responsive
 
+//Mobile 
+@media only screen and (max-width: 576px) {
+    //PROJECTS
+} 
+
+
 //Tablet 
 @media only screen and (min-width: 577px) and (max-width: 991px){
 
-    body {
-        div {
-            .container-fluid {
-                .structure-project {
-                    .project-container {
-                        width: 75% !important;
-                        margin: 0 auto;
-                    }
-                } 
-            }
-        }
-    }
     
 
 }
@@ -108,35 +65,40 @@ body {
 @media only screen and (min-width: 992px) {
 
     body {
+
         div {
-            .container-fluid {
+            .container {
 
                 //HOME
-                .home-structure {
+                .home-content {
                     height: $contentHeight;
-        
+
                     .social {
-                        order: 2
+                        order: 2;
+                        margin-top: 0;
+                    }
+
+                    .social-icons {
+                        height: $contentHeight;
                     }
                 }
 
                 //PROJECTS
+                //PROJECTS GRID
+                .content {
+                    .col-12 {
+                        .project-container {
+                            @include flex(space-between, stretch, row);
+                        }
+                    }
+                }
+                
 
 
                 //BIO
 
 
                 //CONTACTS
-            }
-
-            .responsive-nav {
-                height: $navHeight;
-        
-                .nav-list {
-                    padding-left: 0;
-                    height: $navHeight;
-                    @include flex (space-between, center, row);
-                }
             }
         }
     }    
@@ -148,7 +110,7 @@ body {
 
     body {
         div {
-            .container-fluid {
+            .container {
                 max-width: 1200px;
             }
         }
