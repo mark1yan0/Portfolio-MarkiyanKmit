@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   scroll-behavior: smooth;
 }
@@ -36,6 +37,8 @@ body .background .container .home-content .title {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-animation: titleEntranceResponsive 2s normal;
+          animation: titleEntranceResponsive 2s normal;
 }
 
 body .background .container .content {
@@ -72,6 +75,10 @@ body .background-bio {
 @media only screen and (min-width: 992px) {
   body .background .container .home-content {
     height: 90vh;
+  }
+  body .background .container .home-content .title {
+    -webkit-animation: titleEntranceDesktop 2s normal;
+            animation: titleEntranceDesktop 2s normal;
   }
   body .background .container .home-content .home-social {
     -webkit-box-ordinal-group: 3;
@@ -134,6 +141,12 @@ body .background-bio {
       flex-wrap: wrap;
 }
 
+.nav .nav-list a:hover,
+.nav .nav-list a:focus {
+  color: #449AEF;
+  text-decoration: none;
+}
+
 .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,12 +163,25 @@ body .background-bio {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-animation: socialEntranceResponsive 2s normal;
+          animation: socialEntranceResponsive 2s normal;
 }
 
-.social-icons li a {
-  color: white;
-  font-size: 4em;
+.social-icons li i {
+  color: #E3E3E3;
+  font-size: 4rem;
   text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.social-icons li i:hover, .social-icons li i:focus {
+  -webkit-transform: translate(0, -0.2em);
+          transform: translate(0, -0.2em);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #449AEF;
+  background-color: #E3E3E3;
 }
 
 .project {
@@ -168,9 +194,24 @@ body .background-bio {
           box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
 }
 
+.project:hover {
+  border: 0.01em solid #449AEF;
+  -webkit-transform: translate(0, -0.5em);
+          transform: translate(0, -0.5em);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .project .project-image img {
   width: 100%;
   border-radius: 1em 1em 0 0;
+  opacity: 1;
+}
+
+.project .project-image:hover, .project .project-image:active {
+  opacity: 0.3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .project .project-description {
@@ -210,7 +251,7 @@ form input, form textarea {
   margin-bottom: 1em;
   border: 0.1em solid #78786E;
   border-radius: 10px;
-  background-color: rgba(120, 120, 110, 0.8);
+  background-color: rgba(129, 129, 129, 0.8);
   color: #449AEF;
   font-size: 2em;
 }
@@ -229,6 +270,10 @@ form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
 
 form input::placeholder, form textarea::placeholder {
   color: #434343;
+}
+
+form input:hover, form input:focus, form textarea:hover, form textarea:focus {
+  border: 0.1em solid #449AEF;
 }
 
 div hr {
@@ -251,6 +296,15 @@ button {
   background: linear-gradient(#3c3cc3 0%, #449aef 100%);
   color: #E3E3E3;
   font-size: 2em;
+  opacity: 1;
+}
+
+button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.8;
+  background: white;
+  color: #449AEF;
 }
 
 @media only screen and (min-width: 577px) and (max-width: 991px) {
@@ -275,6 +329,8 @@ button {
             flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-animation: socialEntranceDesktop 2s normal;
+            animation: socialEntranceDesktop 2s normal;
   }
   .nav {
     height: 10vh;
@@ -363,6 +419,114 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+/* Animazioni diverse in base al device. 
+   Domanda: ho provato a farlo con la direttiva @if di sass
+   per non diver impostare diversi nomi e richiamarli un'unica volta
+   non ci sono riuscit, sarebbe possibile farlo o questo è l'unico
+   modo per distinguere? */
+@-webkit-keyframes socialEntranceResponsive {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes socialEntranceResponsive {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes socialEntranceDesktop {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes socialEntranceDesktop {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes titleEntranceResponsive {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes titleEntranceResponsive {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes titleEntranceDesktop {
+  from {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes titleEntranceDesktop {
+  from {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 :focus {

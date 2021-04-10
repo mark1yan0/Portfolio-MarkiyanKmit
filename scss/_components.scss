@@ -10,6 +10,12 @@
         margin: 0;
         height: $navHeightResponsive;
         @include flex (space-around, center, column);
+
+        a:hover,
+        a:focus {
+            color: $blueColor;
+            text-decoration: none;
+        }
     }
 }  
 
@@ -17,11 +23,22 @@
 //SOCIAL
 .social-icons {
     @include flex(space-between, flex-start, row);
+    animation: socialEntranceResponsive 2s normal;
     li {
-        a {
-            color: white;
-            font-size: 4em;
+
+        i {
+            color: $secondaryTextColor;
+            font-size: 4rem;
             text-shadow: $shadow;
+            padding: 1rem;
+            border-radius: 10px;
+            &:hover,
+            &:focus {
+                transform: translate(0, -0.2em);
+                transition: 0.5s;
+                color: $blueColor;
+                background-color: $secondaryTextColor;
+            }
         }
     }
 }
@@ -34,12 +51,25 @@
     min-height: 450px;
     border-radius: 1em 1em 0 0;
     box-shadow: $shadow;
+
+    &:hover {
+        border: 0.01em solid $blueColor;
+        transform: translate(0, -0.5em);
+        transition: 0.5s;
+    }
     
     .project-image {
         img {
             width: 100%;
             border-radius: 1em 1em 0 0;
+            opacity: 1;
         }
+        &:hover,
+        &:active {
+            opacity: 0.3;
+            transition: 0.5s; //finire
+        }
+        
     }
 
     .project-description {
@@ -85,11 +115,16 @@ form {
         margin-bottom: 1em;
         border: 0.1em solid $textColor;
         border-radius: 10px;
-        background-color: rgba(120, 120, 110, 0.8);
+        background-color: rgba(129, 129, 129, 0.8);
         color: $blueColor;
         font-size: 2em;
         &::placeholder {
             color: $primaryColor;
+        }
+
+        &:hover,
+        &:focus {
+            border: 0.1em solid $blueColor;
         }
     }
 }
@@ -119,6 +154,14 @@ button {
     background: linear-gradient(rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
     color: $secondaryTextColor;
     font-size: 2em;
+    opacity: 1;
+
+    &:hover {
+        transition: 0.5s;
+        opacity: 0.8;
+        background: white;
+        color: $blueColor;
+    }
 }
 
 //responsive
@@ -151,8 +194,11 @@ button {
 @media only screen and (min-width: 992px) {
 
     //SOCIAL
+
     .home-social-icons {
         @include flex(space-around, center, column);
+
+        animation: socialEntranceDesktop 2s normal;
     }
 
     //NAV

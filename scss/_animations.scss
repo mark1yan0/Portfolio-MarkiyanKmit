@@ -1,0 +1,55 @@
+/* Animazioni diverse in base al device. 
+   Domanda: ho provato a farlo con la direttiva @if di sass
+   per non diver impostare diversi nomi e richiamarli un'unica volta
+   non ci sono riuscit, sarebbe possibile farlo o questo è l'unico
+   modo per distinguere? */
+@keyframes socialEntranceResponsive {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }          
+}
+
+
+@keyframes socialEntranceDesktop {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }          
+}
+
+@keyframes titleEntranceResponsive {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }          
+}
+
+@keyframes titleEntranceDesktop {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+        
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }          
+}
+
+

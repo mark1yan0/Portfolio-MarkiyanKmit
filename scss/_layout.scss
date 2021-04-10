@@ -25,6 +25,7 @@ body {
                 .title {
                     height: 100%; //height title container
                     @include flex(center, flex-start, column);
+                    animation: titleEntranceResponsive 2s normal;
                 }
             }
 
@@ -81,7 +82,10 @@ body {
                 //HOME
                 .home-content {
                     height: $fixedHeight;
-
+                    .title {
+                        animation: titleEntranceDesktop 2s normal;
+                    } 
+                    
                     .home-social {
                         order: 2; //icons on right
                         margin-top: 0;
