@@ -3,28 +3,16 @@
     margin: 0;
     width: 100%;
     background: white;
-    height: $navHeight;
+    height: $navHeightResponsive;
 
     .nav-list {
         padding-left: 0;
         margin: 0;
-        height: $navHeight;
-        @include flex (space-between, center, row);
+        height: $navHeightResponsive;
+        @include flex (space-around, center, column);
     }
 }  
 
-//nav home per mobile e tablet
-.responsive-nav {
-    margin: 0;
-    width: 100%;
-    height: $navHeightResponsive;
-    background: white;
-
-    .nav-list {
-        height: $navHeightResponsive;
-        @include flex (space-around, center, column);
-    } 
-}
 
 //SOCIAL
 .social-icons {
@@ -32,7 +20,7 @@
     li {
         a {
             color: white;
-            font-size: 2em;
+            font-size: 4em;
         }
     }
 }
@@ -50,6 +38,51 @@
     }
 } 
 
+
+//FORM DESIGN
+form {
+    input, textarea {
+        width: 100%;
+        line-height: 2em;
+        padding: 0 1em;
+        margin-bottom: 1em;
+        border: 0.1em solid $textColor;
+        border-radius: 10px;
+        background-color: rgba(120, 120, 110, 0.8);
+        color: $blueColor;
+        font-size: 2em;
+        &::placeholder {
+            color: $primaryColor;
+        }
+    }
+}
+
+div {
+    hr {
+        border: 0.1em solid $blueColor;;
+    }
+
+    .contact-option {
+        text-align: center;
+        color: $secondaryTextColor;
+    }
+}
+
+
+
+
+//Buttons 
+button {
+    width: 100%;
+    line-height: 2em;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    border: 1px solid $textColor;
+    border-radius: 10px;
+    background: linear-gradient(rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    color: $secondaryTextColor;
+    font-size: 2em;
+}
 
 //responsive
 
@@ -69,12 +102,12 @@
 @media only screen and (min-width: 992px) {
 
     //SOCIAL
-    .social-icons {
+    .home-social-icons {
         @include flex(space-around, center, column);
     }
 
     //NAV
-    .responsive-nav {
+    .nav {
         height: $navHeight;
 
         .nav-list {

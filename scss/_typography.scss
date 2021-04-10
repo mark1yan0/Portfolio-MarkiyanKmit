@@ -2,6 +2,7 @@ html {
     font-size: 62.5%; //Setto il font a 10px
 }
 
+
 //Colore testo titoli a gradiente 
 h1, h2 {
     background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
@@ -12,11 +13,11 @@ h1, h2 {
 }
 
 h1 { //settare il fontsize e fare tutto in em
-    font-size: 5.5rem;
+    font-size: 6rem;
 }
 
 h2 {
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-size: $m-titleSize;
 }
 
@@ -25,7 +26,32 @@ p {
     color: $textColor;
 }
 
+.nav-list a {
+
+    &:link {
+        font-size: 2.5em;
+        color: $textColor;
+    }
+
+    &:visited {
+        color: $textColor;
+    }
+}
+
 //Coloroe sottotitolo nella HOME
 .subtitle {
     color: $secondaryTextColor;
+    font-size: 2rem;
+}
+
+
+//Small details
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+    
+li {
+    list-style-type: none;
 }

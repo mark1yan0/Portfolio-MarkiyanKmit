@@ -12,17 +12,6 @@ body {
         width: 100%;
 
         .container {
-            
-            .content {
-                margin: 0;
-
-                .col-12 {
-                    //PROJECTS GRID
-                    .project-container { 
-                        @include flex(space-between, center, column);
-                    }
-                }
-            }
 
             //HOME
             .home-content {
@@ -39,15 +28,30 @@ body {
                 }
             }
 
+            
+            .content {
+                margin: 0;
+
+                .col-12 {
+                    //PROJECTS GRID
+                    .project-container { 
+                        @include flex(space-between, center, column);
+                    }
+                }
+            }
+
             //CONTACTS height
             .contacts-content {
-                height: 100vh;
+                min-height: 100vh;
             }
         }
     }
 
     .background-bio {
         background-image: linear-gradient($secondaryColor 20%, $secondaryTextColor 100%); //sitemare gradiente
+
+        
+        //BIO content
     }
 }
 
@@ -80,12 +84,12 @@ body {
                 .home-content {
                     height: $fixedHeight;
 
-                    .social {
+                    .home-social {
                         order: 2;
                         margin-top: 0;
                     }
 
-                    .social-icons {
+                    .home-social-icons {
                         height: $fixedHeight;
                     }
                 }
