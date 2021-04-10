@@ -14,11 +14,13 @@ h1, h2 {
 
 h1 { //settare il fontsize e fare tutto in em
     font-size: 6rem;
+    text-shadow: $shadow;
 }
 
 h2 {
     margin: 2rem 0;
     font-size: 4rem;
+    text-shadow: $shadow;
 }
 
 h3 {
@@ -26,7 +28,7 @@ h3 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $textColor;
 }
 
@@ -46,7 +48,9 @@ p {
 .subtitle {
     color: $secondaryTextColor;
     font-size: 2rem;
+    text-shadow: $shadow;
 }
+
 
 
 //Small details

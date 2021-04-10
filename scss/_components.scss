@@ -21,6 +21,7 @@
         a {
             color: white;
             font-size: 4em;
+            text-shadow: $shadow;
         }
     }
 }
@@ -32,6 +33,7 @@
     width: 100%;
     min-height: 450px;
     border-radius: 1em 1em 0 0;
+    box-shadow: $shadow;
     
     .project-image {
         img {
@@ -50,6 +52,28 @@
     }
 
 } 
+
+//BIO
+.bio-card {
+    background: white;
+    box-shadow: $shadow;
+    border-radius: 10px;
+    padding: 2em;
+    margin-bottom: 2em;
+    .bio-photo {
+        display: block;
+        float: left;
+        width: 15rem;
+        border-radius: 100%;
+        margin-right: 2em;
+    }   
+
+    .bio-text {
+        font-size: 2rem;
+        text-align: justify; //non sono sicuro di questa scelta stilistica
+    }
+}
+
 
 
 //FORM DESIGN
@@ -112,7 +136,7 @@ button {
     .project {
 
         .project-description {
-            
+
             p {
                 font-size: 2rem;
             }
