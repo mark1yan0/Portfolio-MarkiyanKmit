@@ -2,17 +2,17 @@
   scroll-behavior: smooth;
 }
 
-body div {
+body .background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 23, 18, 0.8)), to(#78786E));
+  background-image: linear-gradient(rgba(23, 23, 18, 0.8) 0%, #78786E 100%);
   width: 100%;
 }
 
-body div .container .content {
+body .background .container .content {
   margin: 0;
-  height: 90vh;
 }
 
-body div .container .content .col-12 .project-container {
-  margin-top: -30px;
+body .background .container .content .col-12 .project-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,18 +30,18 @@ body div .container .content .col-12 .project-container {
       flex-wrap: wrap;
 }
 
-body div .container .home-content {
+body .background .container .home-content {
   height: 65vh;
 }
 
-body div .container .home-content .social {
+body .background .container .home-content .social {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
-  margin-top: 15px;
+  margin-top: 1.5em;
 }
 
-body div .container .home-content .title {
+body .background .container .home-content .title {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,20 +60,29 @@ body div .container .home-content .title {
       flex-wrap: wrap;
 }
 
+body .background .container .contacts-content {
+  height: 100vh;
+}
+
+body .background-bio {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #FFFFFF), to(#E3E3E3));
+  background-image: linear-gradient(#FFFFFF 20%, #E3E3E3 100%);
+}
+
 @media only screen and (min-width: 992px) {
-  body div .container .home-content {
+  body .background .container .home-content {
     height: 90vh;
   }
-  body div .container .home-content .social {
+  body .background .container .home-content .social {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin-top: 0;
   }
-  body div .container .home-content .social-icons {
+  body .background .container .home-content .social-icons {
     height: 90vh;
   }
-  body div .container .content .col-12 .project-container {
+  body .background .container .content .col-12 .project-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -93,7 +102,7 @@ body div .container .home-content .title {
 }
 
 @media only screen and (min-width: 1200px) {
-  body div .container {
+  body .background .container {
     max-width: 1200px;
   }
 }
@@ -175,7 +184,7 @@ body div .container .home-content .title {
 }
 
 .project {
-  margin-top: 30px;
+  margin-bottom: 3em;
   background-color: #449AEF;
   width: 100%;
   height: 100%;
@@ -184,28 +193,6 @@ body div .container .home-content .title {
 .project .project-image {
   width: 100%;
   height: 40%;
-}
-
-h1, h2 {
-  background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-h1 {
-  font-size: 55px;
-}
-
-h2 {
-  margin-top: 20px;
-  font-size: 40px;
-}
-
-p {
-  font-size: 25px;
-  color: #78786E;
 }
 
 @media only screen and (min-width: 992px) {
@@ -258,18 +245,38 @@ p {
   }
 }
 
-body .background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 23, 18, 0.8)), to(#78786E));
-  background-image: linear-gradient(rgba(23, 23, 18, 0.8) 0%, #78786E 100%);
+html {
+  font-size: 62.5%;
 }
 
-body .background .container .subtitle {
+h1, h2 {
+  background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2.2rem;
+  color: #78786E;
+}
+
+.subtitle {
   color: #E3E3E3;
 }
 
-body .background-bio {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #FFFFFF), to(#E3E3E3));
-  background-image: linear-gradient(#FFFFFF 20%, #E3E3E3 100%);
+:focus {
+  outline: none;
 }
 
 ul {

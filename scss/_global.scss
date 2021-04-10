@@ -1,7 +1,6 @@
 //layout
 $navHeight: 10vh;
-$contentHeight: 100vh - $navHeight;
-
+$fixedHeight: 100vh - $navHeight;
 
 $navHeightResponsive: 35vh;
 
@@ -14,16 +13,16 @@ $textColor: #78786E;
 $secondaryTextColor: #E3E3E3;
 
 //text mobile
-$m-titleSize: 40px;
-$m-pSize: 25px;
+$m-titleSize: 4rem;
+$m-pSize: 2.2rem;
 
 //text tablet
-$t-titleSize: 40px;
-$t-pSize: 25px;
+$t-titleSize: 4rem;
+$t-pSize: 2.5rem;
 
 //text desktop
-$d-titleSize: 40px;
-$d-pSize: 25px;
+$d-titleSize: 4rem;
+$d-pSize: 2.5rem;
 
 
 //mixins

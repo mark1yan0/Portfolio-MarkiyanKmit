@@ -6,19 +6,19 @@
 
 body {
 
-    div {
+    .background {
+
+        background-image: linear-gradient($primaryColor 0%, $textColor 100%);
         width: 100%;
 
         .container {
             
             .content {
                 margin: 0;
-                height: $contentHeight;
 
                 .col-12 {
                     //PROJECTS GRID
-                    .project-container {
-                        margin-top: -30px; 
+                    .project-container { 
                         @include flex(space-between, center, column);
                     }
                 }
@@ -26,21 +26,28 @@ body {
 
             //HOME
             .home-content {
-                height: 100vh - $navHeightResponsive; //altezza per telefono
+                height: 100vh - $navHeightResponsive; //height mobile home
 
                 .social {
                     order: 0;
-                    margin-top: 15px;
+                    margin-top: 1.5em;
                 }
 
                 .title {
-                    height: 100%; //altezza contenitore titolo per telefono
+                    height: 100%; //height title container
                     @include flex(center, flex-start, column);
                 }
             }
 
-           
+            //CONTACTS height
+            .contacts-content {
+                height: 100vh;
+            }
         }
+    }
+
+    .background-bio {
+        background-image: linear-gradient($secondaryColor 20%, $secondaryTextColor 100%); //sitemare gradiente
     }
 }
 
@@ -66,12 +73,12 @@ body {
 
     body {
 
-        div {
+        .background {
             .container {
 
                 //HOME
                 .home-content {
-                    height: $contentHeight;
+                    height: $fixedHeight;
 
                     .social {
                         order: 2;
@@ -79,7 +86,7 @@ body {
                     }
 
                     .social-icons {
-                        height: $contentHeight;
+                        height: $fixedHeight;
                     }
                 }
 
@@ -109,7 +116,7 @@ body {
 @media only screen and (min-width: 1200px) {
 
     body {
-        div {
+        .background {
             .container {
                 max-width: 1200px;
             }

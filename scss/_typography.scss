@@ -1,0 +1,31 @@
+html {
+    font-size: 62.5%; //Setto il font a 10px
+}
+
+//Colore testo titoli a gradiente 
+h1, h2 {
+    background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+h1 { //settare il fontsize e fare tutto in em
+    font-size: 5.5rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: $m-titleSize;
+}
+
+p {
+    font-size: $m-pSize;
+    color: $textColor;
+}
+
+//Coloroe sottotitolo nella HOME
+.subtitle {
+    color: $secondaryTextColor;
+}

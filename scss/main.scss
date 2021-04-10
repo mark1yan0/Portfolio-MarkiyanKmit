@@ -1,41 +1,15 @@
 @import '_global.scss';
 @import '_layout.scss';
 @import '_components.scss';
+@import '_typography.scss';
 
-//COLORS
-body {
-
-    .background {
-        background-image: linear-gradient($primaryColor 0%, $textColor 100%);
-
-
-
-        
-        .container {
-
-            //HOME
-            .subtitle {
-                color: $secondaryTextColor;
-            }
-
-            //PROJECTS
-
-            //BIO
-
-            //CONTACTS
-        }
-
-        
-    }
-
-    .background-bio {
-        background-image: linear-gradient($secondaryColor 20%, $secondaryTextColor 100%); //sitemare gradiente
-    }
-    
-}
 
 
 //Small ditails
+:focus {
+    outline: none;
+}
+
 ul {
     margin: 0;
     padding: 0;
