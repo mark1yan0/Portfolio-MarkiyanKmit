@@ -18,11 +18,15 @@ h1 { //settare il fontsize e fare tutto in em
 
 h2 {
     margin: 2rem 0;
-    font-size: $m-titleSize;
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 p {
-    font-size: $m-pSize;
+    font-size: 1.5rem;
     color: $textColor;
 }
 
