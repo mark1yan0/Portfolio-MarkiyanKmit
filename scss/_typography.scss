@@ -1,5 +1,12 @@
 html {
     font-size: 62.5%; //Setto il font a 10px
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
+    font-family: 'Comfortaa', cursive;
 }
 
 
@@ -10,6 +17,7 @@ h1, h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    font-weight: 600;
 }
 
 h1 { //settare il fontsize e fare tutto in em

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 * {
   scroll-behavior: smooth;
 }
@@ -65,6 +66,13 @@ body .background .container .content .col-12 .project-container {
 
 body .background .container .contacts-content {
   min-height: 100vh;
+}
+
+body .background-home {
+  background-image: url(/media/background-home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body .background-bio {
@@ -222,6 +230,10 @@ body .background-bio {
   margin-top: 0.5em;
 }
 
+.project .project-description p {
+  font-size: 1.7rem;
+}
+
 .bio-card {
   background: white;
   -webkit-box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
@@ -234,7 +246,7 @@ body .background-bio {
 .bio-card .bio-photo {
   display: block;
   float: left;
-  width: 15rem;
+  width: 10rem;
   border-radius: 100%;
   margin-right: 2em;
 }
@@ -249,11 +261,11 @@ form input, form textarea {
   line-height: 2em;
   padding: 0 1em;
   margin-bottom: 1em;
-  border: 0.1em solid #78786E;
+  border: 0.1rem solid #78786E;
   border-radius: 10px;
   background-color: rgba(129, 129, 129, 0.8);
   color: #449AEF;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
@@ -273,7 +285,7 @@ form input::placeholder, form textarea::placeholder {
 }
 
 form input:hover, form input:focus, form textarea:hover, form textarea:focus {
-  border: 0.1em solid #449AEF;
+  border: 0.1rem solid #449AEF;
 }
 
 div hr {
@@ -290,7 +302,7 @@ button {
   line-height: 2em;
   padding: 0 1em;
   margin-bottom: 1em;
-  border: 1px solid #78786E;
+  border: 0.1rem solid #78786E;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(#3c3cc3), to(#449aef));
   background: linear-gradient(#3c3cc3 0%, #449aef 100%);
@@ -305,7 +317,7 @@ button:hover {
   opacity: 0.8;
   background: white;
   color: #449AEF;
-  border: 0.1em solid #449AEF;
+  border: 0.1rem solid #449AEF;
 }
 
 @media only screen and (min-width: 577px) and (max-width: 991px) {
@@ -370,12 +382,17 @@ html {
   font-size: 62.5%;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
+  font-family: 'Comfortaa', cursive;
+}
+
 h1, h2 {
   background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  font-weight: 600;
 }
 
 h1 {

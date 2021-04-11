@@ -48,12 +48,17 @@ body {
         }
     }
 
+    .background-home {
+        background-image: url(/media/background-home.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .background-bio {
         background-image: linear-gradient($secondaryTextColor 20%, $secondaryColor 100%); //sitemare gradiente
-
-        
-        //BIO content
     }
+
 }
 
 
