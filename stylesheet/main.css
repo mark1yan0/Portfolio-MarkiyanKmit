@@ -69,7 +69,7 @@ body .background .container .contacts-content {
 }
 
 body .background-home {
-  background-image: url(/media/background-home.jpg);
+  background-image: url(../media/background-home.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
