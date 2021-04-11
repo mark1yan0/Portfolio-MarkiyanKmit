@@ -133,6 +133,8 @@ body .background-bio {
   padding-left: 0;
   margin: 0;
   height: 35vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,23 +177,6 @@ body .background-bio {
           animation: socialEntranceResponsive 2s normal;
 }
 
-.social-icons li i {
-  color: #E3E3E3;
-  font-size: 4rem;
-  text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.social-icons li i:hover, .social-icons li i:focus {
-  -webkit-transform: translate(0, -0.2em);
-          transform: translate(0, -0.2em);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: #449AEF;
-  background-color: #E3E3E3;
-}
-
 .project {
   margin-bottom: 3em;
   background-color: #E3E3E3;
@@ -201,25 +186,60 @@ body .background-bio {
   -webkit-box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
           box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
   border: 0.1em solid #449AEF;
-}
-
-.project:hover {
-  -webkit-transform: translate(0, -0.5em);
-          transform: translate(0, -0.5em);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.project .project-image {
+  position: relative;
 }
 
 .project .project-image img {
   width: 100%;
   border-radius: 1em 1em 0 0;
   opacity: 1;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
 }
 
-.project .project-image:hover, .project .project-image:active {
-  opacity: 0.3;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.project .project-image .project-links {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.project .project-image .project-links i {
+  border-radius: 50%;
+  font-size: 2.5em;
+  color: white;
+  background-color: #449aefa4;
+}
+
+.project .project-image .project-links i:hover {
+  color: #449AEF;
+  background-color: #E3E3E3;
+}
+
+.project:hover {
+  -webkit-transform: translate(0, -0.5em);
+          transform: translate(0, -0.5em);
+}
+
+.project:hover img {
+  opacity: 0.5;
+}
+
+.project:hover .project-links {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  pointer-events: all;
 }
 
 .project .project-description {
@@ -309,11 +329,11 @@ button {
   color: #E3E3E3;
   font-size: 2em;
   opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 button:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   opacity: 0.8;
   background: white;
   color: #449AEF;
@@ -428,6 +448,23 @@ p {
   color: #E3E3E3;
   font-size: 2rem;
   text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
+}
+
+i {
+  color: #E3E3E3;
+  font-size: 4rem;
+  text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+i:hover, i:focus {
+  -webkit-transform: translate(0, -0.2em);
+          transform: translate(0, -0.2em);
+  color: #449AEF;
+  background-color: #E3E3E3;
 }
 
 ul {

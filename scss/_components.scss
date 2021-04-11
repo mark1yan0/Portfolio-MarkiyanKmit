@@ -9,6 +9,7 @@
         padding-left: 0;
         margin: 0;
         height: $navHeightResponsive;
+        transition: 0.3s;
         @include flex (space-around, center, column);
 
         a:hover,
@@ -24,23 +25,6 @@
 .social-icons {
     @include flex(space-between, flex-start, row);
     animation: socialEntranceResponsive 2s normal;
-    li {
-
-        i {
-            color: $secondaryTextColor;
-            font-size: 4rem;
-            text-shadow: $shadow;
-            padding: 1rem;
-            border-radius: 10px;
-            &:hover,
-            &:focus {
-                transform: translate(0, -0.2em);
-                transition: 0.5s;
-                color: $blueColor;
-                background-color: $secondaryTextColor;
-            }
-        }
-    }
 }
 
 //PROJECTS
@@ -52,26 +36,56 @@
     border-radius: 1em 1em 0 0;
     box-shadow: $shadow;
     border: .1em solid $blueColor;
+    transition: 0.5s;
 
-    &:hover {
-        transform: translate(0, -0.5em);
-        transition: 0.5s;
-    }
-    
     .project-image {
+        position: relative;
         img {
             width: 100%;
             border-radius: 1em 1em 0 0;
             opacity: 1;
+            transition: 0.5s ease-in;
         }
-        &:hover,
-        &:active {
-            opacity: 0.3;
-            transition: 0.5s; //finire
-        }
-        
+
+        .project-links {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -5%);
+            opacity: 0;
+            pointer-events: none; //Se no per poco si può attivare fuori dall'area stabilita
+            transition: 0.5s ease;  
+            
+
+            i {
+                border-radius: 50%;
+                font-size: 2.5em;
+                color: white;
+                background-color: #449aefa4;
+
+                &:hover {
+                    color: $blueColor;
+                    background-color: $secondaryTextColor;
+                }
+            }
+        }  
     }
 
+    &:hover {
+        transform: translate(0, -0.5em);
+
+        img {  //Animazione Overlay per i link sull'immagine 
+            opacity: 0.5;
+        }
+
+        .project-links {
+            opacity: 1;
+            transform: translate(-50%, -20%);   
+            pointer-events: all; 
+
+        }
+    }
+    
     .project-description {
         padding: 0 1em;
 
@@ -82,9 +96,7 @@
         p {
             font-size: 1.7rem;
         }
-
     }
-
 } 
 
 //BIO
@@ -159,9 +171,9 @@ button {
     color: $secondaryTextColor;
     font-size: 2em;
     opacity: 1;
+    transition: 0.5s;
 
     &:hover {
-        transition: 0.5s;
         opacity: 0.8;
         background: white;
         color: $blueColor;
@@ -202,7 +214,6 @@ button {
 
     .home-social-icons {
         @include flex(space-around, center, column);
-
         animation: socialEntranceDesktop 2s normal;
     }
 

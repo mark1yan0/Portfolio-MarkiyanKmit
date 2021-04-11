@@ -60,6 +60,23 @@ p {
 }
 
 
+//ICONS
+i {
+    color: $secondaryTextColor;
+    font-size: 4rem;
+    text-shadow: $shadow;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+        transform: translate(0, -0.2em);
+        color: $blueColor;
+        background-color: $secondaryTextColor;
+    }
+}
+
 
 //Small details
 
