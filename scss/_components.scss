@@ -51,9 +51,9 @@
     min-height: 450px;
     border-radius: 1em 1em 0 0;
     box-shadow: $shadow;
+    border: .1em solid $blueColor;
 
     &:hover {
-        border: 0.01em solid $blueColor;
         transform: translate(0, -0.5em);
         transition: 0.5s;
     }
@@ -161,6 +161,7 @@ button {
         opacity: 0.8;
         background: white;
         color: $blueColor;
+        border: .1em solid $blueColor;
     }
 }
 
