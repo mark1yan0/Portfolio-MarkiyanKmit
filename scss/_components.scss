@@ -41,7 +41,7 @@
     min-height: 450px;
     border-radius: 1em 1em 0 0;
     box-shadow: $shadow;
-    border: .1em solid $blueColor;
+    border: 0.1em solid $blueColor;
     transition: 0.5s;
 
     .project-image {
@@ -188,7 +188,7 @@ button {
         opacity: 0.8;
         background: white;
         color: $blueColor;
-        border: .1rem solid $blueColor;
+        border: 0.1rem solid $blueColor;
     }
 }
 
@@ -270,7 +270,7 @@ button {
 
         i {
             &:hover { 
-                transform: translateX(-.2em); 
+                transform: translateX(-0.2em); 
             }
         }
 

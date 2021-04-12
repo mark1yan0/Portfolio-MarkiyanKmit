@@ -54,7 +54,7 @@ h3 {
     color: white;
     overflow: hidden;
     white-space: nowrap;
-    padding: .5em 0;
+    padding: 0.5em 0;
     border-radius: 10px;
 }
 
@@ -126,9 +126,9 @@ li {
 //Desktop
 @media only screen and (min-width: 992px) {
     .white-text, .normal-text {
-        margin: .5em;
+        margin: 0.5em;
         text-align: left;
-        letter-spacing: .5em;
+        letter-spacing: 0.5em;
     }
 }
 
