@@ -571,7 +571,6 @@ h3 {
   color: white;
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: .2em;
   padding: .5em 0;
   border-radius: 10px;
 }
@@ -640,7 +639,6 @@ li {
   .white-text, .normal-text {
     margin: .5em;
     text-align: left;
-    letter-spacing: .5em;
   }
 }
 
