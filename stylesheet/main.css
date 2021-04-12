@@ -100,6 +100,10 @@ body .background .container .content .col-12 .project-container {
       flex-wrap: wrap;
 }
 
+body .background .container .bio-content .bio-animation-container {
+  width: 100%;
+}
+
 body .background .container .contacts-content {
   min-height: 100vh;
 }
@@ -557,6 +561,26 @@ h3 {
   font-size: 3rem;
 }
 
+.white-text, .normal-text {
+  display: block;
+  margin: 1em auto;
+  text-align: center;
+  -webkit-animation: typingAnimation 10s infinite;
+          animation: typingAnimation 10s infinite;
+  background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .5em;
+  padding: .5em 0;
+  border-radius: 10px;
+}
+
+.normal-text {
+  background: transparent;
+  color: #78786E;
+}
+
 p {
   font-size: 2rem;
   color: #78786E;
@@ -607,6 +631,16 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+/* ============
+    Responsive
+   ============ */
+@media only screen and (min-width: 992px) {
+  .white-text, .normal-text {
+    margin: .5em;
+    text-align: left;
+  }
 }
 
 /* Animazioni diverse in base al device. 
@@ -719,6 +753,32 @@ li {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+/* ===============
+   Bio animation
+   ============== */
+@-webkit-keyframes typingAnimation {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 75%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes typingAnimation {
+  from {
+    width: 0%;
+  }
+  50% {
+    width: 75%;
+  }
+  to {
+    width: 0%;
   }
 }
 

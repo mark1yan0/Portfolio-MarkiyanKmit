@@ -43,6 +43,27 @@ h3 {
     font-size: 3rem;
 }
 
+
+//Bio text animation
+.white-text, .normal-text {
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    animation: typingAnimation 10s infinite;
+    background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .5em;
+    padding: .5em 0;
+    border-radius: 10px;
+}
+
+.normal-text {
+    background: transparent;
+    color: $textColor;
+}
+
 p {
     font-size: 2rem;
     color: $textColor;
@@ -91,7 +112,7 @@ i {
 /* ============
     Small Details
    ============ */
-ul {
+   ul {
     margin: 0;
     padding: 0;
 }
@@ -99,3 +120,15 @@ ul {
 li {
     list-style-type: none;
 }
+
+/* ============
+    Responsive
+   ============ */
+//Desktop
+@media only screen and (min-width: 992px) {
+    .white-text, .normal-text {
+        margin: .5em;
+        text-align: left;
+    }
+}
+
