@@ -1,21 +1,28 @@
-//layout
+/* ============
+    Layout
+   ============ */
 $navHeight: 10vh;
 $fixedHeight: 100vh - $navHeight;
 
 $navHeightResponsive: 35vh;
 
-//colors
+/* ============
+    Colors
+   ============ */
 $blueColor: #449AEF;
 $primaryColor: #434343;
 $secondaryColor: #FFFFFF;
 $textColor: #78786E;
 $secondaryTextColor: #E3E3E3;
 
-//shadow
+/* ============
+    Shadow
+   ============ */
 $shadow: 0.5rem 0.5rem  10px rgba(0, 0, 0, 0.329);
 
-
-//mixins
+/* ============
+    Mixins
+   ============ */
 @mixin flex ($justify, $align, $direction) {
     display: flex;
     justify-content: $justify;

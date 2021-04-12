@@ -1,13 +1,43 @@
 @charset "UTF-8";
+/* ============
+    Layout
+   ============ */
+/* ============
+    Colors
+   ============ */
+/* ============
+    Shadow
+   ============ */
+/* ============
+    Mixins
+   ============ */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 * {
   scroll-behavior: smooth;
+}
+
+body {
+  /* ============
+        Generale
+        ============ */
+  /* ============
+        Specific Background
+        ============ */
 }
 
 body .background {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#78786E));
   background-image: linear-gradient(#434343 0%, #78786E 100%);
   width: 100%;
+}
+
+body .background .container {
+  /* ============
+                HOME
+                ============ */
+  /* ============
+                Contacts height
+                ============ */
 }
 
 body .background .container .home-content {
@@ -46,6 +76,12 @@ body .background .container .content {
   margin: 0;
 }
 
+body .background .container .content .col-12 {
+  /* ============
+                        Projects Grid
+                        ============ */
+}
+
 body .background .container .content .col-12 .project-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,7 +116,35 @@ body .background-bio {
   background-image: linear-gradient(#E3E3E3 20%, #FFFFFF 100%);
 }
 
+/* ============
+    Responsive
+   ============ */
+@media only screen and (max-width: 576px) {
+  /* ============
+        Specific Background
+        ============ */
+  .background-home {
+    background-image: url(../media/background-home-small.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* non sono sicuro di aver scelto le dimensioni corrette per 
+        questa immagine da visualizzare per mobile e desktop
+        Inoltre non sono sicuro che questo sia il modo migliore per ottimizzare
+        le immagini di sfondo in questo modo, siccome non sono riuscito a pensare
+        neanche ad un modo di ottimizzare l'immagine per schermi a retina  */
+}
+
 @media only screen and (min-width: 992px) {
+  body .background .container {
+    /* ============
+                    HOME
+                    ============ */
+    /* ============
+                    Projects
+                    ============ */
+  }
   body .background .container .home-content {
     height: 90vh;
   }
@@ -122,6 +186,9 @@ body .background-bio {
   }
 }
 
+/* ============
+    NAVBAR
+   ============ */
 .nav {
   margin: 0;
   width: 100%;
@@ -157,6 +224,9 @@ body .background-bio {
   text-decoration: none;
 }
 
+/* ============
+    Social Icons
+   ============ */
 .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,6 +247,9 @@ body .background-bio {
           animation: socialEntranceResponsive 2s normal;
 }
 
+/* ============
+    Project Cards
+   ============ */
 .project {
   margin-bottom: 3em;
   background-color: #E3E3E3;
@@ -254,6 +327,9 @@ body .background-bio {
   font-size: 1.7rem;
 }
 
+/* ============
+    BIO
+   ============ */
 .bio-card {
   background: white;
   -webkit-box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
@@ -276,6 +352,9 @@ body .background-bio {
   text-align: justify;
 }
 
+/* ============
+    Contacts Form
+   ============ */
 form input, form textarea {
   width: 100%;
   line-height: 2em;
@@ -317,6 +396,9 @@ div .contact-option {
   color: #E3E3E3;
 }
 
+/* ============
+    Buttons
+   ============ */
 button {
   width: 100%;
   line-height: 2em;
@@ -340,6 +422,39 @@ button:hover {
   border: 0.1rem solid #449AEF;
 }
 
+/* ============
+    Scrollbar
+   ============ */
+::-webkit-scrollbar {
+  width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#78786E));
+  background: linear-gradient(#434343 0%, #78786E 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(333deg, rgba(60, 60, 195, 0.5) 0%, rgba(68, 154, 239, 0.5) 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
+}
+
+::-webkit-scrollbar-button {
+  background: #78786E;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-button:hover {
+  background: #449AEF;
+}
+
+/* ============
+    RESPONSIVE
+   ============ */
 @media only screen and (min-width: 577px) and (max-width: 991px) {
   .project .project-description p {
     font-size: 2rem;
@@ -347,24 +462,6 @@ button:hover {
 }
 
 @media only screen and (min-width: 992px) {
-  .home-social-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-animation: socialEntranceDesktop 2s normal;
-            animation: socialEntranceDesktop 2s normal;
-  }
   .nav {
     height: 10vh;
   }
@@ -387,6 +484,28 @@ button:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .home-social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-animation: socialEntranceDesktop 2s normal;
+            animation: socialEntranceDesktop 2s normal;
+  }
+  .home-social-icons i:hover {
+    -webkit-transform: translateX(-0.2em);
+            transform: translateX(-0.2em);
+  }
   .project {
     width: 48%;
   }
@@ -402,10 +521,16 @@ html {
   font-size: 62.5%;
 }
 
+/* ============
+    Font
+   ============ */
 h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
   font-family: 'Comfortaa', cursive;
 }
 
+/* ====================
+    Text Gradient Color
+   ===================== */
 h1, h2 {
   background: linear-gradient(333deg, #3c3cc3 0%, #449aef 100%);
   background-clip: text;
@@ -415,6 +540,9 @@ h1, h2 {
   font-weight: 600;
 }
 
+/* ====================
+    General Typography
+   ===================== */
 h1 {
   font-size: 6rem;
   text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
@@ -450,6 +578,9 @@ p {
   text-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
 }
 
+/* ============
+    ICONS
+   ============ */
 i {
   color: #E3E3E3;
   font-size: 4rem;
@@ -460,13 +591,16 @@ i {
   transition: 0.5s;
 }
 
-i:hover, i:focus {
+i:hover {
   -webkit-transform: translate(0, -0.2em);
           transform: translate(0, -0.2em);
   color: #449AEF;
   background-color: #E3E3E3;
 }
 
+/* ============
+    Small Details
+   ============ */
 ul {
   margin: 0;
   padding: 0;
@@ -481,10 +615,13 @@ li {
    per non diver impostare diversi nomi e richiamarli un'unica volta
    non ci sono riuscit, sarebbe possibile farlo o questo è l'unico
    modo per distinguere? */
+/* ==================================
+    Social Icons Entrance Aminations
+   ==================================== */
 @-webkit-keyframes socialEntranceResponsive {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
     opacity: 0;
   }
   to {
@@ -495,8 +632,8 @@ li {
 }
 @keyframes socialEntranceResponsive {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
     opacity: 0;
   }
   to {
@@ -508,8 +645,8 @@ li {
 
 @-webkit-keyframes socialEntranceDesktop {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
     opacity: 0;
   }
   to {
@@ -521,8 +658,8 @@ li {
 
 @keyframes socialEntranceDesktop {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
     opacity: 0;
   }
   to {
@@ -532,10 +669,13 @@ li {
   }
 }
 
+/* ==================================
+    Home title Entrance Animations
+   ==================================== */
 @-webkit-keyframes titleEntranceResponsive {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
     opacity: 0;
   }
   to {
@@ -544,11 +684,10 @@ li {
     opacity: 1;
   }
 }
-
 @keyframes titleEntranceResponsive {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
     opacity: 0;
   }
   to {
@@ -560,8 +699,8 @@ li {
 
 @-webkit-keyframes titleEntranceDesktop {
   from {
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
     opacity: 0;
   }
   to {
@@ -573,8 +712,8 @@ li {
 
 @keyframes titleEntranceDesktop {
   from {
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
     opacity: 0;
   }
   to {
@@ -584,6 +723,9 @@ li {
   }
 }
 
+/* ====================
+    Small details
+   ===================== */
 :focus {
   outline: none;
 }

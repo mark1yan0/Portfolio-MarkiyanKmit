@@ -1,4 +1,6 @@
-//NAV
+/* ============
+    NAVBAR
+   ============ */
 .nav {
     margin: 0;
     width: 100%;
@@ -21,13 +23,17 @@
 }  
 
 
-//SOCIAL
+/* ============
+    Social Icons
+   ============ */
 .social-icons {
     @include flex(space-between, flex-start, row);
     animation: socialEntranceResponsive 2s normal;
 }
 
-//PROJECTS
+/* ============
+    Project Cards
+   ============ */
 .project {
     margin-bottom: 3em;
     background-color: $secondaryTextColor;
@@ -99,7 +105,11 @@
     }
 } 
 
-//BIO
+/* ============
+    BIO
+   ============ */
+
+   //bio card
 .bio-card {
     background: white;
     box-shadow: $shadow;
@@ -120,9 +130,13 @@
     }
 }
 
+    //bio...
 
 
-//FORM DESIGN
+
+/* ============
+    Contacts Form
+   ============ */
 form {
     input, textarea {
         width: 100%;
@@ -159,7 +173,9 @@ div {
 
 
 
-//Buttons 
+/* ============
+    Buttons
+   ============ */
 button {
     width: 100%;
     line-height: 2em;
@@ -181,17 +197,49 @@ button {
     }
 }
 
-//responsive
+/* ============
+    Scrollbar
+   ============ */
+//Non supportato in FireFox
+::-webkit-scrollbar {
+    width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient($primaryColor 0%, $textColor 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(333deg, rgba(60,60,195,0.5) 0%, rgba(68,154,239,0.5) 100%);
+    border-radius:  10px;
+
+    &:hover {
+        background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
+    }
+}
+
+::-webkit-scrollbar-button {
+    background: $textColor;
+    height: 1rem;
+
+    &:hover {
+        background: $blueColor;
+    }
+}
+
+
+/* ============
+    RESPONSIVE
+   ============ */
 
 //Mobile 
 @media only screen and (max-width: 576px) {
 
 } 
 
-
-
 //Tablet 
 @media only screen and (min-width: 577px) and (max-width: 991px) {
+
     //PROJECTS
     .project {
 
@@ -206,16 +254,8 @@ button {
 }
 
 
-
 //Desktop
 @media only screen and (min-width: 992px) {
-
-    //SOCIAL
-
-    .home-social-icons {
-        @include flex(space-around, center, column);
-        animation: socialEntranceDesktop 2s normal;
-    }
 
     //NAV
     .nav {
@@ -227,6 +267,20 @@ button {
             @include flex (space-between, center, row);
         }
     }
+
+    //SOCIAL
+    .home-social-icons {
+        @include flex(space-around, center, column);
+        animation: socialEntranceDesktop 2s normal;
+
+        i {
+            &:hover { 
+                transform: translateX(-.2em); 
+            }
+        }
+
+    }
+
 
     //PROJECTS
     .project {

@@ -3,9 +3,14 @@
    per non diver impostare diversi nomi e richiamarli un'unica volta
    non ci sono riuscit, sarebbe possibile farlo o questo è l'unico
    modo per distinguere? */
+
+
+/* ==================================
+    Social Icons Entrance Aminations
+   ==================================== */
 @keyframes socialEntranceResponsive {
     from {
-        transform: translateY(-100%);
+        transform: translateY(-30%);
         opacity: 0;
     }
     
@@ -18,7 +23,7 @@
 
 @keyframes socialEntranceDesktop {
     from {
-        transform: translateX(100%);
+        transform: translateX(30%);
         opacity: 0;
     }
     
@@ -28,9 +33,12 @@
     }          
 }
 
+/* ==================================
+    Home title Entrance Animations
+   ==================================== */
 @keyframes titleEntranceResponsive {
     from {
-        transform: translateX(100%);
+        transform: translateX(10%);
         opacity: 0;
     }
     
@@ -42,7 +50,7 @@
 
 @keyframes titleEntranceDesktop {
     from {
-        transform: translateY(-20%);
+        transform: translateY(-10%);
         opacity: 0;
     }
         

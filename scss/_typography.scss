@@ -1,8 +1,11 @@
 html {
-    font-size: 62.5%; //Setto il font a 10px
+    font-size: 62.5%; //font == 10px
     
 }
 
+/* ============
+    Font
+   ============ */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
 h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
@@ -10,7 +13,9 @@ h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
 }
 
 
-//Colore testo titoli a gradiente 
+/* ====================
+    Text Gradient Color
+   ===================== */
 h1, h2 {
     background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
     background-clip: text;
@@ -20,7 +25,10 @@ h1, h2 {
     font-weight: 600;
 }
 
-h1 { //settare il fontsize e fare tutto in em
+/* ====================
+    General Typography
+   ===================== */
+h1 {
     font-size: 6rem;
     text-shadow: $shadow;
 }
@@ -52,7 +60,7 @@ p {
     }
 }
 
-//Coloroe sottotitolo nella HOME
+//HOME Subtitle Color
 .subtitle {
     color: $secondaryTextColor;
     font-size: 2rem;
@@ -60,7 +68,9 @@ p {
 }
 
 
-//ICONS
+/* ============
+    ICONS
+   ============ */
 i {
     color: $secondaryTextColor;
     font-size: 4rem;
@@ -69,17 +79,18 @@ i {
     border-radius: 10px;
     transition: 0.5s;
 
-    &:hover,
-    &:focus {
+    &:hover {
         transform: translate(0, -0.2em);
         color: $blueColor;
         background-color: $secondaryTextColor;
-    }
+    } 
+
+    //purtroppo non sono riuscito a settare un :focus sulle icone
 }
 
-
-//Small details
-
+/* ============
+    Small Details
+   ============ */
 ul {
     margin: 0;
     padding: 0;

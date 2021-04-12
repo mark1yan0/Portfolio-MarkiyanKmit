@@ -6,6 +6,10 @@
 
 body {
 
+    /* ============
+        Generale
+        ============ */
+
     .background {
 
         background-image: linear-gradient($primaryColor 0%, $textColor 100%);
@@ -13,7 +17,9 @@ body {
 
         .container {
 
-            //HOME
+            /* ============
+                HOME
+                ============ */
             .home-content {
                 height: 100vh - $navHeightResponsive; //height mobile home
 
@@ -34,39 +40,60 @@ body {
                 margin: 0;
 
                 .col-12 {
-                    //PROJECTS GRID
+                    /* ============
+                        Projects Grid
+                        ============ */
                     .project-container { 
                         @include flex(space-between, center, column);
                     }
                 }
             }
 
-            //CONTACTS height
+            /* ============
+                Contacts height
+                ============ */
             .contacts-content {
                 min-height: 100vh;
             }
         }
     }
-
+    /* ============
+        Specific Background
+        ============ */
     .background-home {
-        background-image: url(../media/background-home.jpg); //perchè è in un'altra cartella
+        background-image: url(../media/background-home.jpg); //uso ../ perchè è in un'altra cartella
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .background-bio {
-        background-image: linear-gradient($secondaryTextColor 20%, $secondaryColor 100%); //sitemare gradiente
+        background-image: linear-gradient($secondaryTextColor 20%, $secondaryColor 100%); 
     }
 
 }
 
 
-//responsive
+/* ============
+    Responsive
+   ============ */
 
 //Mobile 
 @media only screen and (max-width: 576px) {
-    //PROJECTS
+    /* ============
+        Specific Background
+        ============ */
+    .background-home { //per mobile
+        background-image: url(../media/background-home-small.jpg); //perchè è in un'altra cartella
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+        /* non sono sicuro di aver scelto le dimensioni corrette per 
+        questa immagine da visualizzare per mobile e desktop
+        Inoltre non sono sicuro che questo sia il modo migliore per ottimizzare
+        le immagini di sfondo in questo modo, siccome non sono riuscito a pensare
+        neanche ad un modo di ottimizzare l'immagine per schermi a retina  */
 } 
 
 
@@ -84,7 +111,9 @@ body {
         .background {
             .container {
 
-                //HOME
+                /* ============
+                    HOME
+                    ============ */
                 .home-content {
                     height: $fixedHeight;
                     .title {
@@ -101,7 +130,9 @@ body {
                     }
                 }
 
-                //PROJECTS
+                /* ============
+                    Projects
+                    ============ */
                 //PROJECTS GRID
                 .content {
                     .col-12 {
@@ -110,12 +141,8 @@ body {
                         }
                     }
                 }
-                
-
-
-                //BIO
             }
-        }
+        }    
     }    
 }
 
