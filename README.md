@@ -21,10 +21,10 @@ varie parti. Spero di migliorare col tempo.
 
 3) Menù Navigazione |
 Grazie a bootstrap è possibile creare menù di navigazione responsive facilmente, ma dato che voglio imparare ad arrangiarmi, ho preferito cercare un'altra soluzione per una
-navigazione completamente responsive. Inizialmente avevo escogitato un design che implicasse che il menù di navigazione, fisso in basso, cambiasse voci in base alla seione in ci si trova, ma ciò
+navigazione completamente responsive. Inizialmente avevo escogitato un design che implicasse che il menù di navigazione, fisso in basso, cambiasse voci in base alla sezione in ci si trova, ma ciò
 non è possibile senza JavaScript, o senza dover ripetere per ogni sezione il menù nell'HTML. Ho provato ad implementare quest'ultima opzione ma a fronte di "bellezza" non ne 
 valeva la pena, e quindi ho optato per una soluzione più semplice, sfruttando il fatto che la pagina non contiene così tanti contenuti. 
-In futuro cosidererò sicuramente su come impostare meglio la faccenda.
+In futuro considererò sicuramente su come impostare meglio la faccenda.
 
 4) Home |
 La prima pagina è quella che ha variazioni più anticonvenzionali dal punto di vista del responsive. Il menù di navigazione, per device mobili, non collassa, ma si espande in 
@@ -47,20 +47,20 @@ breve ed ho voluto concentrarmi sui valori che mi caratterizzano tramite un'anim
 7) Contatti |
 In questa sezione purtroppo, con le mie conoscenze attuali, il contact form non funziona. Ho deciso di inserirlo comunque perchè so che spesso, il mailto non è visto bene da 
 chi revisiona il portfolio, e quindi preferisco porre da subito le basi per una best practice che sistemerò in futuro non appena avrò le capacità necessarie.
-Per sistemare parzialmente il problema, ho deciso di piproporre i link ai social dai quali posso essere contattato.
+Per sistemare parzialmente il problema, ho deciso di riproporre i link ai social dai quali posso essere contattato.
 
 8) Animazioni |
 Ho voluto cercare di rendere la pagina più interessante proponendo delle animazioni che, seppur semplici, mi hanno permesso di capire un bel po' di concetti avanzati
 come i @keyframes. Spero di essere riuscito nel mio intento.
 
 9) Ottimizzazioni |
-Ho cercato il più possibile di ottimizzare il mio codice, cercando di ridurre parti rindondanti, elementi e container futili. Proporio per questo ho impostato in Sass anche la
+Ho cercato il più possibile di ottimizzare il mio codice, cercando di ridurre parti rindondanti, elementi e container futili. Proprio per questo ho impostato in Sass anche la
 creazione di un foglio di stile minificato che inserisco direttamente nell'HTML.
 L'unico "rimpianto" è che non sono riuscito a capire bene come ottimizzare le immagini inserite, siccome il metodo srcset sembra essere utlizzato se si conosce la larghezza 
 esatta del contenitore, ma il ho impostato tutto il percentuale e in relazione, cercando di evitare maggiormente di impostare px fissi.
 
 10) In futuro |
 In futuro sicuramente ritornerò sui miei passi, più consapevole dei miei errori e di quello che devo sistemare, di novità da implementare. Per primi in lista vorrei riuscire a 
-creare un menà di navigazione come avevo inteso nel primo design, vorrei sicuramente sistemare il contactform, e vorrei riuscire a creare delle interazioni particolari come 
+creare un menù di navigazione come avevo inteso nel primo design, vorrei sicuramente sistemare il contact form, e vorrei riuscire a creare delle interazioni particolari come 
 animazioni in base allo scroll dell'utente.
 
