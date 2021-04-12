@@ -640,6 +640,7 @@ li {
   .white-text, .normal-text {
     margin: .5em;
     text-align: left;
+    letter-spacing: .2em;
   }
 }
 
