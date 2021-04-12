@@ -645,8 +645,8 @@ li {
 
 /* Animazioni diverse in base al device. 
    Domanda: ho provato a farlo con la direttiva @if di sass
-   per non diver impostare diversi nomi e richiamarli un'unica volta
-   non ci sono riuscit, sarebbe possibile farlo o questo è l'unico
+   per non dover impostare diversi nomi e richiamarli un'unica volta
+   non ci sono riuscito, sarebbe possibile farlo o questo è l'unico
    modo per distinguere? */
 /* ==================================
     Social Icons Entrance Aminations
@@ -764,7 +764,7 @@ li {
     width: 0%;
   }
   50% {
-    width: 75%;
+    width: 100%;
   }
   to {
     width: 0%;
@@ -775,7 +775,7 @@ li {
     width: 0%;
   }
   50% {
-    width: 75%;
+    width: 100%;
   }
   to {
     width: 0%;
