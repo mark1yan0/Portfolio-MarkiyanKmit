@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ============
     Layout
    ============ */
@@ -133,11 +132,6 @@ body .background-bio {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  /* non sono sicuro di aver scelto le dimensioni corrette per 
-        questa immagine da visualizzare per mobile e desktop
-        Inoltre non sono sicuro che questo sia il modo migliore per ottimizzare
-        le immagini di sfondo in questo modo, siccome non sono riuscito a pensare
-        neanche ad un modo di ottimizzare l'immagine per schermi a retina  */
 }
 
 @media only screen and (min-width: 992px) {
@@ -254,7 +248,7 @@ body .background-bio {
 /* ============
     Project Cards
    ============ */
-.project {
+.project-card {
   margin-bottom: 3em;
   background-color: #E3E3E3;
   width: 100%;
@@ -267,11 +261,11 @@ body .background-bio {
   transition: 0.5s;
 }
 
-.project .project-image {
+.project-card .project-image {
   position: relative;
 }
 
-.project .project-image img {
+.project-card .project-image img {
   width: 100%;
   border-radius: 1em 1em 0 0;
   opacity: 1;
@@ -279,7 +273,7 @@ body .background-bio {
   transition: 0.5s ease-in;
 }
 
-.project .project-image .project-links {
+.project-card .project-image .project-links {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -291,43 +285,47 @@ body .background-bio {
   transition: 0.5s ease;
 }
 
-.project .project-image .project-links i {
+.project-card .project-image .project-links .hide {
+  display: none;
+}
+
+.project-card .project-image .project-links i {
   border-radius: 50%;
   font-size: 2.5em;
   color: white;
   background-color: #449aefa4;
 }
 
-.project .project-image .project-links i:hover {
+.project-card .project-image .project-links i:hover {
   color: #449AEF;
   background-color: #E3E3E3;
 }
 
-.project:hover {
+.project-card:hover {
   -webkit-transform: translate(0, -0.5em);
           transform: translate(0, -0.5em);
 }
 
-.project:hover img {
+.project-card:hover img {
   opacity: 0.5;
 }
 
-.project:hover .project-links {
+.project-card:hover .project-links {
   opacity: 1;
   -webkit-transform: translate(-50%, -20%);
           transform: translate(-50%, -20%);
   pointer-events: all;
 }
 
-.project .project-description {
+.project-card .project-description {
   padding: 0 1em;
 }
 
-.project .project-description h3 {
+.project-card .project-description h3 {
   margin-top: 0.5em;
 }
 
-.project .project-description p {
+.project-card .project-description p {
   font-size: 1.7rem;
 }
 
@@ -358,7 +356,8 @@ body .background-bio {
 /* ============
     Contacts Form
    ============ */
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   line-height: 2em;
   padding: 0 1em;
@@ -370,23 +369,29 @@ form input, form textarea {
   font-size: 2rem;
 }
 
-form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
   color: #434343;
 }
 
-form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
   color: #434343;
 }
 
-form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
   color: #434343;
 }
 
-form input::placeholder, form textarea::placeholder {
+form input::placeholder,
+form textarea::placeholder {
   color: #434343;
 }
 
-form input:hover, form input:focus, form textarea:hover, form textarea:focus {
+form input:hover, form input:focus,
+form textarea:hover,
+form textarea:focus {
   border: 0.1rem solid #449AEF;
 }
 
@@ -429,7 +434,7 @@ button:hover {
     Scrollbar
    ============ */
 ::-webkit-scrollbar {
-  width: .7rem;
+  width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -459,7 +464,7 @@ button:hover {
     RESPONSIVE
    ============ */
 @media only screen and (min-width: 577px) and (max-width: 991px) {
-  .project .project-description p {
+  .project-card .project-description p {
     font-size: 2rem;
   }
 }
@@ -509,13 +514,13 @@ button:hover {
     -webkit-transform: translateX(-0.2em);
             transform: translateX(-0.2em);
   }
-  .project {
+  .project-card {
     width: 48%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .project {
+  .project-card {
     width: 31%;
   }
 }
@@ -643,11 +648,6 @@ li {
   }
 }
 
-/* Animazioni diverse in base al device. 
-   Domanda: ho provato a farlo con la direttiva @if di sass
-   per non dover impostare diversi nomi e richiamarli un'unica volta
-   non ci sono riuscito, sarebbe possibile farlo o questo è l'unico
-   modo per distinguere? */
 /* ==================================
     Social Icons Entrance Aminations
    ==================================== */

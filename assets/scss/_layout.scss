@@ -1,167 +1,151 @@
 //Mobile-first
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-
-    /* ============
+  /* ============
         Generale
         ============ */
 
-    .background {
+  .background {
+    background-image: linear-gradient($primaryColor 0%, $textColor 100%);
+    width: 100%;
 
-        background-image: linear-gradient($primaryColor 0%, $textColor 100%);
-        width: 100%;
-
-        .container {
-
-            /* ============
+    .container {
+      /* ============
                 HOME
                 ============ */
-            .home-content {
-                height: 100vh - $navHeightResponsive; //height mobile home
+      .home-content {
+        height: 100vh - $navHeightResponsive; //height mobile home
 
-                .social {
-                    order: 0; //Icons on top
-                    margin-top: 1.5em;
-                }
+        .social {
+          order: 0; //Icons on top
+          margin-top: 1.5em;
+        }
 
-                .title {
-                    height: 100%; //height title container
-                    @include flex(center, flex-start, column);
-                    animation: titleEntranceResponsive 2s normal;
-                }
-            }
+        .title {
+          height: 100%; //height title container
+          @include flex(center, flex-start, column);
+          animation: titleEntranceResponsive 2s normal;
+        }
+      }
 
-            
-            .content {
-                margin: 0;
+      .content {
+        margin: 0;
 
-                .col-12 {
-                    /* ============
+        .col-12 {
+          /* ============
                         Projects Grid
                         ============ */
-                    .project-container { 
-                        @include flex(space-between, center, column);
-                    }
-                }
-            }
+          .project-container {
+            @include flex(space-between, center, column);
+          }
+        }
+      }
 
-            .bio-content {
-                .bio-animation-container {
-                    width: 100%;
-                }
-            }
-            
+      .bio-content {
+        .bio-animation-container {
+          width: 100%;
+        }
+      }
 
-            /* ============
+      /* ============
                 Contacts height
                 ============ */
-            .contacts-content {
-                min-height: 100vh;
-            }
-        }
+      .contacts-content {
+        min-height: 100vh;
+      }
     }
-    /* ============
+  }
+  /* ============
         Specific Background
         ============ */
-    .background-home {
-        background-image: url(../media/background-home.jpg); //uso ../ perchè è in un'altra cartella
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  .background-home {
+    background-image: url(../media/background-home.jpg); //uso ../ perchè è in un'altra cartella
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    .background-bio {
-        background-image: linear-gradient($secondaryTextColor 20%, $secondaryColor 100%); 
-    }
-
+  .background-bio {
+    background-image: linear-gradient(
+      $secondaryTextColor 20%,
+      $secondaryColor 100%
+    );
+  }
 }
-
 
 /* ============
     Responsive
    ============ */
 
-//Mobile 
+//Mobile
 @media only screen and (max-width: 576px) {
-    /* ============
+  /* ============
         Specific Background
         ============ */
-    .background-home { //per mobile
-        background-image: url(../media/background-home-small.jpg); //perchè è in un'altra cartella
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-        /* non sono sicuro di aver scelto le dimensioni corrette per 
-        questa immagine da visualizzare per mobile e desktop
-        Inoltre non sono sicuro che questo sia il modo migliore per ottimizzare
-        le immagini di sfondo in questo modo, siccome non sono riuscito a pensare
-        neanche ad un modo di ottimizzare l'immagine per schermi a retina  */
-} 
-
-
-//Tablet 
-@media only screen and (min-width: 577px) and (max-width: 991px){
-
+  .background-home {
+    //per mobile
+    background-image: url(../media/background-home-small.jpg); //perchè è in un'altra cartella
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
+//Tablet
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+}
 
 //Desktop
 @media only screen and (min-width: 992px) {
-
-    body {
-
-        .background {
-            .container {
-
-                /* ============
+  body {
+    .background {
+      .container {
+        /* ============
                     HOME
                     ============ */
-                .home-content {
-                    height: $fixedHeight;
-                    .title {
-                        animation: titleEntranceDesktop 2s normal;
-                    } 
-                    
-                    .home-social {
-                        order: 2; //icons on right
-                        margin-top: 0;
-                    }
+        .home-content {
+          height: $fixedHeight;
+          .title {
+            animation: titleEntranceDesktop 2s normal;
+          }
 
-                    .home-social-icons {
-                        height: $fixedHeight;
-                    }
-                }
+          .home-social {
+            order: 2; //icons on right
+            margin-top: 0;
+          }
 
-                /* ============
+          .home-social-icons {
+            height: $fixedHeight;
+          }
+        }
+
+        /* ============
                     Projects
                     ============ */
-                //PROJECTS GRID
-                .content {
-                    .col-12 {
-                        .project-container {
-                            @include flex(space-between, stretch, row);
-                        }
-                    }
-                }
+        //PROJECTS GRID
+        .content {
+          .col-12 {
+            .project-container {
+              @include flex(space-between, stretch, row);
             }
-        }    
-    }    
+          }
+        }
+      }
+    }
+  }
 }
-
 
 //Extra large screens
 @media only screen and (min-width: 1200px) {
-
-    body {
-        .background {
-            .container {
-                max-width: 1200px;
-            }
-        }
+  body {
+    .background {
+      .container {
+        max-width: 1200px;
+      }
     }
+  }
 }

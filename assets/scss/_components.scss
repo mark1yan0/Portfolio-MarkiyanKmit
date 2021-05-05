@@ -2,194 +2,197 @@
     NAVBAR
    ============ */
 .nav {
+  margin: 0;
+  width: 100%;
+  background: white;
+  height: $navHeightResponsive;
+
+  .nav-list {
+    padding-left: 0;
     margin: 0;
-    width: 100%;
-    background: white;
     height: $navHeightResponsive;
+    transition: 0.3s;
+    @include flex(space-around, center, column);
 
-    .nav-list {
-        padding-left: 0;
-        margin: 0;
-        height: $navHeightResponsive;
-        transition: 0.3s;
-        @include flex (space-around, center, column);
-
-        a:hover,
-        a:focus {
-            color: $blueColor;
-            text-decoration: none;
-        }
+    a:hover,
+    a:focus {
+      color: $blueColor;
+      text-decoration: none;
     }
-}  
-
+  }
+}
 
 /* ============
     Social Icons
    ============ */
 .social-icons {
-    @include flex(space-between, flex-start, row);
-    animation: socialEntranceResponsive 2s normal;
+  @include flex(space-between, flex-start, row);
+  animation: socialEntranceResponsive 2s normal;
 }
 
 /* ============
     Project Cards
    ============ */
-.project {
-    margin-bottom: 3em;
-    background-color: $secondaryTextColor;
-    width: 100%;
-    min-height: 450px;
-    border-radius: 1em 1em 0 0;
-    box-shadow: $shadow;
-    border: 0.1em solid $blueColor;
-    transition: 0.5s;
+.project-card {
+  margin-bottom: 3em;
+  background-color: $secondaryTextColor;
+  width: 100%;
+  min-height: 450px;
+  border-radius: 1em 1em 0 0;
+  box-shadow: $shadow;
+  border: 0.1em solid $blueColor;
+  transition: 0.5s;
 
-    .project-image {
-        position: relative;
-        img {
-            width: 100%;
-            border-radius: 1em 1em 0 0;
-            opacity: 1;
-            transition: 0.5s ease-in;
-        }
-
-        .project-links {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, -5%);
-            opacity: 0;
-            pointer-events: none; //Se no per poco si può attivare fuori dall'area stabilita
-            transition: 0.5s ease;  
-            
-
-            i {
-                border-radius: 50%;
-                font-size: 2.5em;
-                color: white;
-                background-color: #449aefa4;
-
-                &:hover {
-                    color: $blueColor;
-                    background-color: $secondaryTextColor;
-                }
-            }
-        }  
+  .project-image {
+    position: relative;
+    img {
+      width: 100%;
+      border-radius: 1em 1em 0 0;
+      opacity: 1;
+      transition: 0.5s ease-in;
     }
 
-    &:hover {
-        transform: translate(0, -0.5em);
+    .project-links {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -5%);
+      opacity: 0;
+      pointer-events: none; //Se no per poco si può attivare fuori dall'area stabilita
+      transition: 0.5s ease;
 
-        img {  //Animazione Overlay per i link sull'immagine 
-            opacity: 0.5;
+      .hide {
+        display: none;
+      }
+
+      i {
+        border-radius: 50%;
+        font-size: 2.5em;
+        color: white;
+        background-color: #449aefa4;
+
+        &:hover {
+          color: $blueColor;
+          background-color: $secondaryTextColor;
         }
-
-        .project-links {
-            opacity: 1;
-            transform: translate(-50%, -20%);   
-            pointer-events: all; 
-
-        }
+      }
     }
-    
-    .project-description {
-        padding: 0 1em;
+  }
 
-        h3 {
-            margin-top: 0.5em;
-        }
+  &:hover {
+    transform: translate(0, -0.5em);
 
-        p {
-            font-size: 1.7rem;
-        }
+    img {
+      //Animazione Overlay per i link sull'immagine
+      opacity: 0.5;
     }
-} 
+
+    .project-links {
+      opacity: 1;
+      transform: translate(-50%, -20%);
+      pointer-events: all;
+    }
+  }
+
+  .project-description {
+    padding: 0 1em;
+
+    h3 {
+      margin-top: 0.5em;
+    }
+
+    p {
+      font-size: 1.7rem;
+    }
+  }
+}
 
 /* ============
     BIO
    ============ */
 
-   //bio card
+//bio card
 .bio-card {
-    background: white;
-    box-shadow: $shadow;
-    border-radius: 10px;
-    padding: 2em;
-    margin-bottom: 2em;
-    .bio-photo {
-        display: block;
-        float: left;
-        width: 10rem;
-        border-radius: 100%;
-        margin-right: 2em;
-    }   
+  background: white;
+  box-shadow: $shadow;
+  border-radius: 10px;
+  padding: 2em;
+  margin-bottom: 2em;
+  .bio-photo {
+    display: block;
+    float: left;
+    width: 10rem;
+    border-radius: 100%;
+    margin-right: 2em;
+  }
 
-    .bio-text {
-        font-size: 2rem;
-    }
+  .bio-text {
+    font-size: 2rem;
+  }
 }
 
 /* ============
     Contacts Form
    ============ */
 form {
-    input, textarea {
-        width: 100%;
-        line-height: 2em;
-        padding: 0 1em;
-        margin-bottom: 1em;
-        border: 0.1rem solid $textColor;
-        border-radius: 10px;
-        background-color: rgba(129, 129, 129, 0.8);
-        color: $blueColor;
-        font-size: 2rem;
-        &::placeholder {
-            color: $primaryColor;
-        }
-
-        &:hover,
-        &:focus {
-            border: 0.1rem solid $blueColor;
-        }
-    }
-}
-
-div {
-    hr {
-        border: 0.1em solid $blueColor;;
-    }
-
-    .contact-option {
-        text-align: center;
-        color: $secondaryTextColor;
-    }
-}
-
-
-
-
-/* ============
-    Buttons
-   ============ */
-button {
+  input,
+  textarea {
     width: 100%;
     line-height: 2em;
     padding: 0 1em;
     margin-bottom: 1em;
     border: 0.1rem solid $textColor;
     border-radius: 10px;
-    background: linear-gradient(rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
-    color: $secondaryTextColor;
-    font-size: 2em;
-    opacity: 1;
-    transition: 0.5s;
-
-    &:hover {
-        opacity: 0.8;
-        background: white;
-        color: $blueColor;
-        border: 0.1rem solid $blueColor;
+    background-color: rgba(129, 129, 129, 0.8);
+    color: $blueColor;
+    font-size: 2rem;
+    &::placeholder {
+      color: $primaryColor;
     }
+
+    &:hover,
+    &:focus {
+      border: 0.1rem solid $blueColor;
+    }
+  }
+}
+
+div {
+  hr {
+    border: 0.1em solid $blueColor;
+  }
+
+  .contact-option {
+    text-align: center;
+    color: $secondaryTextColor;
+  }
+}
+
+/* ============
+    Buttons
+   ============ */
+button {
+  width: 100%;
+  line-height: 2em;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  border: 0.1rem solid $textColor;
+  border-radius: 10px;
+  background: linear-gradient(
+    rgba(60, 60, 195, 1) 0%,
+    rgba(68, 154, 239, 1) 100%
+  );
+  color: $secondaryTextColor;
+  font-size: 2em;
+  opacity: 1;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+    background: white;
+    color: $blueColor;
+    border: 0.1rem solid $blueColor;
+  }
 }
 
 /* ============
@@ -197,100 +200,93 @@ button {
    ============ */
 //Non supportato in FireFox
 ::-webkit-scrollbar {
-    width: .7rem;
+  width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: linear-gradient($primaryColor 0%, $textColor 100%);
+  background: linear-gradient($primaryColor 0%, $textColor 100%);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(333deg, rgba(60,60,195,0.5) 0%, rgba(68,154,239,0.5) 100%);
-    border-radius:  10px;
+  background: linear-gradient(
+    333deg,
+    rgba(60, 60, 195, 0.5) 0%,
+    rgba(68, 154, 239, 0.5) 100%
+  );
+  border-radius: 10px;
 
-    &:hover {
-        background: linear-gradient(333deg, rgba(60,60,195,1) 0%, rgba(68,154,239,1) 100%);
-    }
+  &:hover {
+    background: linear-gradient(
+      333deg,
+      rgba(60, 60, 195, 1) 0%,
+      rgba(68, 154, 239, 1) 100%
+    );
+  }
 }
 
 ::-webkit-scrollbar-button {
-    background: $textColor;
-    height: 1rem;
+  background: $textColor;
+  height: 1rem;
 
-    &:hover {
-        background: $blueColor;
-    }
+  &:hover {
+    background: $blueColor;
+  }
 }
-
 
 /* ============
     RESPONSIVE
    ============ */
 
-//Mobile 
+//Mobile
 @media only screen and (max-width: 576px) {
-
-} 
-
-//Tablet 
-@media only screen and (min-width: 577px) and (max-width: 991px) {
-
-    //PROJECTS
-    .project {
-
-        .project-description {
-
-            p {
-                font-size: 2rem;
-            }
-
-        }
-    } 
 }
 
+//Tablet
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+  //PROJECTS
+  .project-card {
+    .project-description {
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
 
 //Desktop
 @media only screen and (min-width: 992px) {
+  //NAV
+  .nav {
+    height: $navHeight;
 
-    //NAV
-    .nav {
-        height: $navHeight;
-
-        .nav-list {
-            padding: 0 !important;
-            height: $navHeight;
-            @include flex (space-between, center, row);
-        }
+    .nav-list {
+      padding: 0 !important;
+      height: $navHeight;
+      @include flex(space-between, center, row);
     }
+  }
 
-    //SOCIAL
-    .home-social-icons {
-        @include flex(space-around, center, column);
-        animation: socialEntranceDesktop 2s normal;
+  //SOCIAL
+  .home-social-icons {
+    @include flex(space-around, center, column);
+    animation: socialEntranceDesktop 2s normal;
 
-        i {
-            &:hover { 
-                transform: translateX(-0.2em); 
-            }
-        }
-
+    i {
+      &:hover {
+        transform: translateX(-0.2em);
+      }
     }
+  }
 
-
-    //PROJECTS
-    .project {
-        width: 48%;
-    }    
+  //PROJECTS
+  .project-card {
+    width: 48%;
+  }
 }
-
 
 //Extra large screens
 @media only screen and (min-width: 1200px) {
-    .project {
-        width: 31%;
-    } 
+  .project-card {
+    width: 31%;
+  }
 }
-
-
-
-
