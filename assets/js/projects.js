@@ -7,8 +7,8 @@
 let projects = {
   images: {
     image: [
-      './assets/media/project-prynce.jpg',
-      './assets/media/air-quality.jpg',
+      './assets/media/project-prynce.png',
+      './assets/media/air-quality.png',
       './assets/media/projects-small.jpg',
     ],
     alt: ['Prynce Original Lab', 'img', 'img'],
