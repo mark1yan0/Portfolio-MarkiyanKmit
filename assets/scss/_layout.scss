@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   /* ============
         Generale
         ============ */
@@ -15,8 +16,8 @@ body {
 
     .container {
       /* ============
-                HOME
-                ============ */
+           HOME
+       ============ */
       .home-content {
         height: 100vh - $navHeightResponsive; //height mobile home
 
@@ -37,23 +38,17 @@ body {
 
         .col-12 {
           /* ============
-                        Projects Grid
-                        ============ */
+            Projects Grid
+          ============ */
           .project-container {
             @include flex(space-between, center, column);
           }
         }
       }
 
-      .bio-content {
-        .bio-animation-container {
-          width: 100%;
-        }
-      }
-
       /* ============
-                Contacts height
-                ============ */
+       Contacts height
+       ============ */
       .contacts-content {
         min-height: 100vh;
       }
@@ -70,10 +65,7 @@ body {
   }
 
   .background-bio {
-    background-image: linear-gradient(
-      $secondaryTextColor 20%,
-      $secondaryColor 100%
-    );
+    background: linear-gradient($secondaryTextColor 20%, $secondaryColor 100%);
   }
 }
 
@@ -102,11 +94,12 @@ body {
 //Desktop
 @media only screen and (min-width: 992px) {
   body {
+    margin-top: $navHeight;
     .background {
       .container {
         /* ============
-                    HOME
-                    ============ */
+              HOME
+         ============ */
         .home-content {
           height: $fixedHeight;
           .title {
@@ -124,8 +117,8 @@ body {
         }
 
         /* ============
-                    Projects
-                    ============ */
+         Projects
+         ============ */
         //PROJECTS GRID
         .content {
           .col-12 {

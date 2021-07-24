@@ -51,20 +51,3 @@
     opacity: 1;
   }
 }
-
-/* ===============
-   Bio animation
-   ============== */
-@keyframes typingAnimation {
-  from {
-    width: 0%;
-  }
-
-  50% {
-    width: 100%;
-  }
-
-  to {
-    width: 0%;
-  }
-}

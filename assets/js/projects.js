@@ -1,10 +1,14 @@
 'use strict';
+/* ============
+    Project cards
+   ============ */
 
+// projects data
 let projects = {
   images: {
     image: [
       './assets/media/project-prynce.jpg',
-      './assets/media/projects-small.jpg',
+      './assets/media/air-quality.jpg',
       './assets/media/projects-small.jpg',
     ],
     alt: ['Prynce Original Lab', 'img', 'img'],
@@ -12,31 +16,38 @@ let projects = {
   links: {
     githubLinks: [
       '',
-      'https://github.com/mark1yan0',
+      'https://github.com/mark1yan0/s2i_airQuality',
       'https://github.com/mark1yan0',
     ],
-    projectLinks: ['https://www.prynce.it/', '#', '#'],
+    projectLinks: [
+      'https://www.prynce.it/',
+      'https://nervous-bhabha-b42b4b.netlify.app/',
+      '#',
+    ],
     linkTitle: ['www.prynce.it', '#', '#'],
   },
-  titles: ['Prynce Original Lab', '# Progetto', '# Progetto'],
+  titles: ['Prynce Original Lab', 'Air Quality', '# Progetto'],
   descriptions: {
     p1: [
-      'Progetto di e-commerce al quale lavoro da novembre 2020 sfruttando Wordpress, WooCommerce, Elementor, altri plug-in e CSS personalizzato.',
-      'Descrizione',
+      'Progetto di e-commerce al quale lavoro da novembre 2020 sfruttando WordPress, WooCommerce, Elementor, altri plug-in e CSS personalizzato',
+      "Questo progetto mostra l'indice di qualità dell'aria di una zona in base alla geolocalizzazione dell'utente e alla ricerca della città",
       'Descrizione',
     ],
     p2: [
-      'Questo progetto mi ha permesso di capire importanti concetti sulla costruzione di siti web e di allenarmi con snippet di CSS quando ho iniziato a studiarlo.',
-      '',
+      'Questo progetto mi ha permesso di capire importanti concetti sulla costruzione di siti web e la sua gestione mi permette continuamente di migliorarmi ed aggiornarmi.',
+      'Grazie a questo progetto ho imparato a lavorare con richieste di API, dati in JSON, costruzione di bundle in webpack e in generale scrivere codice JavaScript più avanzato',
       '',
     ],
-    p3: ['Al momento sto lavorando alle ottimizzazioni di tema', '', ''],
+    p3: [
+      '',
+      'La mappa è stata implementata grazie alla libreria LeafletJS, tutto il resto è stato scritto in vanilla JAvaScript',
+      '',
+    ],
   },
 };
 
-//creatign  project cards
+//creating  project cards
 function createProjects() {
-  let projectContainer = document.querySelector('.project-container');
   let projectCard = document.querySelectorAll('.project-card'); //Need to insert divs in html
   for (let i = 0; i < projects.titles.length; i++) {
     projectCard[i].innerHTML = `
@@ -72,8 +83,6 @@ function createProjects() {
                 ${projects.descriptions.p3[i]}
             </p>
         </div>`;
-
-    projectContainer.append(projectCard);
   }
 }
 

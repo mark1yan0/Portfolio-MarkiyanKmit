@@ -16,6 +16,7 @@
 }
 
 body {
+  position: relative;
   /* ============
         Generale
         ============ */
@@ -32,11 +33,11 @@ body .background {
 
 body .background .container {
   /* ============
-                HOME
-                ============ */
+           HOME
+       ============ */
   /* ============
-                Contacts height
-                ============ */
+       Contacts height
+       ============ */
 }
 
 body .background .container .home-content {
@@ -77,8 +78,8 @@ body .background .container .content {
 
 body .background .container .content .col-12 {
   /* ============
-                        Projects Grid
-                        ============ */
+            Projects Grid
+          ============ */
 }
 
 body .background .container .content .col-12 .project-container {
@@ -99,10 +100,6 @@ body .background .container .content .col-12 .project-container {
       flex-wrap: wrap;
 }
 
-body .background .container .bio-content .bio-animation-container {
-  width: 100%;
-}
-
 body .background .container .contacts-content {
   min-height: 100vh;
 }
@@ -115,8 +112,8 @@ body .background-home {
 }
 
 body .background-bio {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #E3E3E3), to(#FFFFFF));
-  background-image: linear-gradient(#E3E3E3 20%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #E3E3E3), to(#FFFFFF));
+  background: linear-gradient(#E3E3E3 20%, #FFFFFF 100%);
 }
 
 /* ============
@@ -135,13 +132,16 @@ body .background-bio {
 }
 
 @media only screen and (min-width: 992px) {
+  body {
+    margin-top: 10vh;
+  }
   body .background .container {
     /* ============
-                    HOME
-                    ============ */
+              HOME
+         ============ */
     /* ============
-                    Projects
-                    ============ */
+         Projects
+         ============ */
   }
   body .background .container .home-content {
     height: 90vh;
@@ -188,6 +188,9 @@ body .background-bio {
     NAVBAR
    ============ */
 .nav {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
   margin: 0;
   width: 100%;
   background: white;
@@ -246,19 +249,69 @@ body .background-bio {
 }
 
 /* ============
+    Tools
+   ============ */
+.tools-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tools-container .tool {
+  margin: 1.5em;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.tools-container .tool:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 1px solid #449AEF;
+  cursor: pointer;
+}
+
+/* ============
+    Experience popup
+   ============ */
+.experience {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+/* ============
     Project Cards
    ============ */
 .project-card {
   margin-bottom: 3em;
   background-color: #E3E3E3;
   width: 100%;
-  min-height: 450px;
-  border-radius: 1em 1em 0 0;
+  min-height: 350px;
+  border-radius: 1em;
   -webkit-box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
           box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.329);
   border: 0.1em solid #449AEF;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .project-card .project-image {
@@ -472,6 +525,8 @@ button:hover {
 @media only screen and (min-width: 992px) {
   .nav {
     height: 10vh;
+    position: fixed;
+    top: 0;
   }
   .nav .nav-list {
     padding: 0 !important;
@@ -756,32 +811,9 @@ li {
   }
 }
 
-/* ===============
-   Bio animation
-   ============== */
-@-webkit-keyframes typingAnimation {
-  from {
-    width: 0%;
-  }
-  50% {
-    width: 100%;
-  }
-  to {
-    width: 0%;
-  }
-}
-@keyframes typingAnimation {
-  from {
-    width: 0%;
-  }
-  50% {
-    width: 100%;
-  }
-  to {
-    width: 0%;
-  }
-}
-
+/* ==============
+    My work
+   ===============*/
 /* ====================
     Small details
    ===================== */

@@ -3,15 +3,11 @@
 @import '_components.scss';
 @import '_typography.scss';
 @import '_animations.scss';
-
+@import '_popups.scss';
 
 /* ====================
     Small details
    ===================== */
 :focus {
-    outline: none;
+  outline: none;
 }
-
-
-
-

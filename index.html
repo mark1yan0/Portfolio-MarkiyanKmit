@@ -15,19 +15,25 @@
     <title>Portfolio | Markiyan Kmit</title>
   </head>
   <body>
-    <nav class="nav">
+    <nav id="nav" class="nav">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <ul class="nav-list">
               <li><a href="./index.html#projects">Progetti</a></li>
-              <li><a href="./about.html">Bio</a></li>
+              <li><a href="./about.html">Chi sono</a></li>
               <li><a href="./contacts.html">Contattami</a></li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- popups -->
+    <div id="exp" class="experience">
+      <p>ciao</p>
+      <button class="btn-close">chiudi</button>
+    </div>
 
     <!-- HOME -->
     <div id="home" class="background background-home">
@@ -75,12 +81,45 @@
     <div id="projects" class="background">
       <div class="container">
         <div class="row content">
-          <div class="col-12">
+          <div class="col-12 col-lg-6">
             <h2>I miei Progetti</h2>
+          </div>
+          <!-- Tools -->
+          <div class="col-12 col-lg-6">
+            <div class="tools-container">
+              <img
+                id="html"
+                class="tool"
+                src="./assets/media/svg/html-bootstrap.svg"
+              />
+              <img
+                id="css"
+                class="tool"
+                src="./assets/media/svg/css-sass.svg"
+              />
+              <img
+                id="js"
+                class="tool"
+                src="./assets/media/svg/javascript.svg"
+              />
+              <!-- <img class="tool" src="./assets/media/svg/react.svg"> -->
+              <img
+                id="wp"
+                class="tool"
+                src="./assets/media/svg/wordpress-elementor.svg"
+              />
+              <img id="adobe" class="tool" src="./assets/media/svg/adobe.svg" />
+            </div>
+          </div>
+          <div class="col-12">
             <div class="project-container">
               <div class="project-card"></div>
               <div class="project-card"></div>
               <div class="project-card"></div>
+            </div>
+          </div>
+          <div id="work" class="col-12 work-process">
+            <p>come lavoro</p>
           </div>
         </div>
       </div>
@@ -108,5 +147,6 @@
     ></script>
     <!--Script-->
     <script src="assets/js/projects.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
