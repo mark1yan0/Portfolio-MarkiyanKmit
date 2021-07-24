@@ -40,7 +40,7 @@ let projects = {
     ],
     p3: [
       '',
-      'La mappa è stata implementata grazie alla libreria LeafletJS, tutto il resto è stato scritto in vanilla JAvaScript',
+      'La mappa è stata implementata grazie alla libreria LeafletJS, tutto il resto è stato scritto in vanilla JavaScript',
       '',
     ],
   },
