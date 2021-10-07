@@ -4,13 +4,59 @@
 .nav {
   z-index: 10;
   position: fixed;
+  bottom: 50px;
+  left: 50px;
+  margin: 0;
+  width: 100px;
+  background: white;
+  height: 100px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+
+  @include flex(center, center, row);
+  .open {
+    display: block;
+    color: $blueColor;
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
+.nav__active {
+  z-index: 10;
+  position: fixed;
   bottom: 0;
+  left: 0;
   margin: 0;
   width: 100%;
   background: white;
   height: $navHeightResponsive;
+  border-radius: 0;
+  transition: all 0.3s ease;
+
+  .open {
+    display: none;
+  }
+
+  .close {
+    display: block;
+    color: $blueColor;
+    font-size: 5rem;
+    text-align: center;
+    transform: translate(50%, 50%);
+  }
 
   .nav-list {
+    display: block;
     padding-left: 0;
     margin: 0;
     height: $navHeightResponsive;
@@ -37,17 +83,14 @@
     Tools
    ============ */
 .tools-container {
-  @include flex(space-around, flex-start, row);
-  .tool {
-    margin: 1.5em;
-    transition: 0.3s ease-in-out;
-    border-radius: 50%;
-
-    &:hover {
-      transform: scale(1.2);
-      border: 1px solid $blueColor;
-      cursor: pointer;
-    }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .tools-icon {
+    font-size: 6rem;
+    color: $blueColor;
+    pointer-events: none;
   }
 }
 
@@ -148,6 +191,7 @@
    ============ */
 
 //bio card
+
 .bio-card {
   background: white;
   box-shadow: $shadow;
@@ -296,11 +340,26 @@ button {
     height: $navHeight;
     position: fixed;
     top: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    left: 0;
+
+    .open,
+    .close {
+      display: none;
+    }
 
     .nav-list {
       padding: 0 !important;
       height: $navHeight;
       @include flex(space-between, center, row);
+
+      a:hover,
+      a:focus {
+        color: $blueColor;
+        text-decoration: none;
+      }
     }
   }
 

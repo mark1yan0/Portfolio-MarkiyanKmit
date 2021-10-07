@@ -15,10 +15,12 @@
     <title>About me | Markiyan Kmit</title>
   </head>
   <body>
-    <nav class="nav">
+    <nav id="nav" class="nav">
       <div class="container">
         <div class="row">
           <div class="col-12">
+            <span class="fas fa-bars open"></span>
+            <span class="fas fa-times close"></span>
             <ul class="nav-list">
               <li><a href="./index.html#projects">Progetti</a></li>
               <li><a href="./about.html">Chi sono</a></li>
@@ -42,50 +44,44 @@
           <div class="col-12">
             <h2>Chi sono</h2>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="bio-card">
-              <img
-                class="bio-photo"
-                src="./assets/media/bio-photo.jpg"
-                alt="img"
-              />
-              <p class="bio-text">
-                Sono un ragazzo ucraino di 21 anni e recentemente ho realizzato
-                che l'informatica per me non rappresenta solo una passione, ma
-                anche una possibilità di crescita personale e professionale.
-              </p>
-              <p class="bio-text">
-                Mi ritengo una persona pragmatica, che capisce l'importanza
-                della formazione, che ha voglia di imparare, di migliorare e di
-                riuscire a fare del bene con le proprie competenze.
-              </p>
-            </div>
+
+          <div class="col-12 col-md-6 bio-card">
+            <img
+              class="bio-photo"
+              src="./assets/media/bio-photo.jpg"
+              alt="img"
+            />
+            <p class="bio-text">
+              Sono un ragazzo ucraino di 21 anni. Nell'ultimo anno mi sono
+              impegnto a studiare sviluppo web, in particolare front end
+              development. Al momento ho lavorato a un progetto reale e sto
+              iniziando a lavorare su altri come freelance.
+            </p>
+            <p class="bio-text">
+              Mi ritengo una persona pragmatica, che capisce l'importanza della
+              formazione, che ha voglia di imparare, di migliorare e di riuscire
+              a fare del bene con le proprie competenze.
+            </p>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="tools-container">
-              <img
-                id="html"
-                class="tool"
-                src="./assets/media/svg/html-bootstrap.svg"
-              />
-              <img
-                id="css"
-                class="tool"
-                src="./assets/media/svg/css-sass.svg"
-              />
-              <img
-                id="js"
-                class="tool"
-                src="./assets/media/svg/javascript.svg"
-              />
-              <!-- <img class="tool" src="./assets/media/svg/react.svg"> -->
-              <img
-                id="wp"
-                class="tool"
-                src="./assets/media/svg/wordpress-elementor.svg"
-              />
-              <img id="adobe" class="tool" src="./assets/media/svg/adobe.svg" />
-            </div>
+
+          <div class="col-12 col-md-6 col-lg-5 bio-card">
+            <p class="bio-text">
+              Al momento sto lavorando ad un progetto che visualizzerà le ultime
+              notizie della giornata, le ultime statistiche e notizie riguardo
+              al Covid e il meteo della giornata in base alla posizione (se si
+              da il permesso), o in base ad una posizione fissa. Sarà inoltre
+              possibile cercare le notizie che si vogliono e aggiungerle ad una
+              lista che verrà salvata in local storage.
+            </p>
+          </div>
+
+          <div class="tools-container bio-card">
+            <i class="fab fa-html5 tools-icon" title="HTML"></i>
+            <i class="fab fa-css3-alt tools-icon" title="CSS"></i>
+            <i class="fab fa-js tools-icon" title="JavaScript"></i>
+            <i class="fab fa-react tools-icon" title="React"></i>
+            <i class="fab fa-wordpress tools-icon" title="WordPress"></i>
+            <i class="fab fa-figma tools-icon" title="Figma"></i>
           </div>
         </div>
       </div>

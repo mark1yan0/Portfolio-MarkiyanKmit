@@ -11,7 +11,7 @@ body {
         ============ */
 
   .background {
-    background-image: linear-gradient($primaryColor 0%, $textColor 100%);
+    background: linear-gradient($primaryColor 0%, $textColor 100%);
     width: 100%;
 
     .container {
@@ -44,6 +44,10 @@ body {
             @include flex(space-between, center, column);
           }
         }
+      }
+
+      .bio-content {
+        @include flex(center, center, column);
       }
 
       /* ============
@@ -126,6 +130,10 @@ body {
               @include flex(space-between, stretch, row);
             }
           }
+        }
+
+        .bio-content {
+          @include flex(space-between, stretch, row);
         }
       }
     }
