@@ -289,10 +289,9 @@ body .background-bio {
 .nav__active .close {
   display: block;
   color: #449AEF;
-  font-size: 5rem;
-  text-align: center;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  font-size: 2rem;
+  margin-top: 2em;
+  margin-left: 2em;
 }
 
 .nav__active .nav-list {
